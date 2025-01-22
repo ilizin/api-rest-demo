@@ -1,15 +1,17 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
-import org.springframework.beans.factory.annotation.Value;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.PalindromeRestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PalindromeService {
+    private static final Logger logger = LoggerFactory.getLogger(PalindromeService.class);
 
-    @Value("${palindrome.service.recursive}")
-    private boolean isRecursive;
+    public boolean isPalindrome(String value, boolean isRecursive) {
 
-    public boolean isPalindrome(String value) {
+        logger.debug("We're running the {} algorithm", isRecursive ? "recursive" : "iterative");
         if (isRecursive) {
             return isPalindromeRecursive(value);
         } else {
@@ -18,8 +20,12 @@ public class PalindromeService {
     }
 
     public boolean isPalindromeIterative(String value) {
-        //TODO
-        return false;
+        for (int i = 0; i < value.length() / 2; i++) {
+            if (value.charAt(i) != value.charAt(value.length() - i - 1)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean isPalindromeRecursive(String value) {
@@ -30,7 +36,7 @@ public class PalindromeService {
             if (value.charAt(0) != value.charAt(lastCharacterPosition)) {
                 return false;
             }
-            return isPalindrome(value.substring(1, lastCharacterPosition));
+            return isPalindromeRecursive(value.substring(1, lastCharacterPosition));
         }
     }
 }
