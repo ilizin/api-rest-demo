@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 public class PalindromeRecursiveService implements PalindromeService {
     private static final Logger logger = LoggerFactory.getLogger(PalindromeRecursiveService.class);
 
+    public PalindromeRecursiveService() {
+        logger.debug("We're instantiating the palindrome recursive service. ");
+    }
+
     public boolean isPalindrome(String value) {
         int lastCharacterPosition = value.length() - 1;
         if (value.isEmpty() || value.length() == 1) {

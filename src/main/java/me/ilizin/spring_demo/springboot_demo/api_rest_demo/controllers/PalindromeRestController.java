@@ -1,6 +1,8 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.interfaces.PalindromeService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,9 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PalindromeRestController {
+    private static final Logger logger = LoggerFactory.getLogger(PalindromeRestController.class);
 
-    @Value("${palindrome.service.recursive}")
-    private boolean isRecursive;
+    // Another dependency injection example
+    @Value("${not.useful.property}")
+    private String notUsefulProperty;
 
     // Private field for dependency
     private final PalindromeService palindromeService;
@@ -27,6 +31,7 @@ public class PalindromeRestController {
 
     @GetMapping("/palindrome/{value}")
     public boolean isPalindrome(@PathVariable String value) {
+        logger.debug("not.useful.property value is '{}'", notUsefulProperty);
         return palindromeService.isPalindrome(value);
     }
 }
