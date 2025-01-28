@@ -1,5 +1,7 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.interfaces.PalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,5 +25,17 @@ public class PalindromeRecursiveService implements PalindromeService {
             }
             return isPalindrome(value.substring(1, lastCharacterPosition));
         }
+    }
+
+    // Add custom code during the bean initialization
+    @PostConstruct
+    public void doStartupStuffStuff() {
+        logger.debug("Doing some startup stuff");
+    }
+
+    // Add custom code during the bean destruction
+    @PreDestroy
+    public void doCleanupStuff() {
+        logger.debug("Doing some cleanup stuff");
     }
 }
