@@ -31,7 +31,7 @@ public class PalindromeRestController {
 
     @GetMapping("/palindrome/{value}")
     public boolean isPalindrome(@PathVariable String value) {
-        logger.debug("not.useful.property value is '{}'", notUsefulProperty);
+        logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
         return palindromeService.isPalindrome(value);
     }
 }
