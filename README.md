@@ -25,3 +25,5 @@ GitHub: [ilizin](https://github.com/ilizin)
 ## 🙌 Acknowledgments
 
 ## ℹ️ Additional information
+
+* http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf

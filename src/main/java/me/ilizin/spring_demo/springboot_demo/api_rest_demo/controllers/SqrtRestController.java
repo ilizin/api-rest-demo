@@ -15,7 +15,7 @@ public class SqrtRestController {
     }
 
     @GetMapping("/sqrt/{value}")
-    public int sqrt(@PathVariable int value) {
+    public double sqrt(@PathVariable int value) {
         return sqrtService.sqrt(value);
     }
 }

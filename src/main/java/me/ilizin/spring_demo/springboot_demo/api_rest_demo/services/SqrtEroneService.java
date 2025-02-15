@@ -8,8 +8,13 @@ import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.interfaces.S
 public class SqrtEroneService implements SqrtService {
 
     @Override
-    public int sqrt(int value) {
-        //TODO implement
-        return -1000;
+    public double sqrt(int value) {
+        double xprev;
+        double xn = 1;
+        do {
+            xprev = xn;
+            xn = 1d/2d * (xprev + value/xprev);
+        } while (Math.abs(xn - xprev) > 0.1);
+        return xn;
     }
 }
