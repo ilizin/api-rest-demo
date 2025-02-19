@@ -1,5 +1,6 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.interfaces.PalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,8 @@ public class PalindromeRestController {
         this.palindromeService = palindromeService;
     }
 
+    @Operation(summary = "Check if a string is palindrome or not",
+            description = "Return true if the string is palindrome, else false")
     @GetMapping("/palindrome/{value}")
     public boolean isPalindrome(@PathVariable String value) {
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
