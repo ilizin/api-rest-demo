@@ -2,13 +2,12 @@ package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.interfaces.PalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PalindromeRecursiveService implements PalindromeService {
+public class PalindromeRecursiveService implements IPalindromeService {
     private static final Logger logger = LoggerFactory.getLogger(PalindromeRecursiveService.class);
 
     public PalindromeRecursiveService() {

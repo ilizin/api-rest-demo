@@ -1,7 +1,7 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
-import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.interfaces.PalindromeService;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +22,13 @@ public class PalindromeRestController {
     private String notUsefulProperty;
 
     // Private field for dependency
-    private final PalindromeService palindromeService;
+    private final IPalindromeService palindromeService;
 
     // Constructor for dependency injection
     // The autowired annotation is optional because we've only one constructor
     // The Qualifier annotation is necessary because we've more than one PalindromeService implementation
     @Autowired
-    public PalindromeRestController(@Qualifier("palindromeRecursiveService") PalindromeService palindromeService) {
+    public PalindromeRestController(@Qualifier("palindromeRecursiveService") IPalindromeService palindromeService) {
         this.palindromeService = palindromeService;
     }
 
