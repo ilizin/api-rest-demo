@@ -7,10 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.Instant;
 
 @RestController
 @RequestMapping("/api")
@@ -32,12 +33,30 @@ public class PalindromeRestController {
         this.palindromeService = palindromeService;
     }
 
+    /* handleException --> the exception handler method
+    *  PalindromeErrorResponse --> type of the response body
+    *  InvalidArgumentException --> exception type to handle/catch */
+    @ExceptionHandler
+    public ResponseEntity<PalindromeErrorResponse> handleException(InvalidArgumentException exception) {
+        PalindromeErrorResponse palindromeErrorResponse = new PalindromeErrorResponse();
+        palindromeErrorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
+        palindromeErrorResponse.setMessage(exception.getMessage());
+        palindromeErrorResponse.setTimestamp(Instant.now().toEpochMilli());
+        return new ResponseEntity<>(palindromeErrorResponse, HttpStatus.BAD_REQUEST);
+    }
+
     // Spring boot uses jackson for (Json, Java pojo) mapping
     @Operation(summary = "Check if a string is palindrome or not",
             description = "Return true if the string is palindrome, else false")
     @GetMapping("/palindrome/{value}")
     public boolean isPalindrome(@PathVariable String value) {
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
+        for(int i = 0; i < value.length(); i++) {
+            if (!Character.isLetter(value.charAt(i))) {
+                String message = "Wrong '" + value + "' argument, please only use letters";
+                throw new InvalidArgumentException(message);
+            }
+        }
         return palindromeService.isPalindrome(value);
     }
 }
