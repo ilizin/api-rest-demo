@@ -37,12 +37,12 @@ public class PalindromeRestController {
     *  PalindromeErrorResponse --> type of the response body
     *  InvalidArgumentException --> exception type to handle/catch */
     @ExceptionHandler
-    public ResponseEntity<PalindromeErrorResponse> handleException(InvalidArgumentException exception) {
-        PalindromeErrorResponse palindromeErrorResponse = new PalindromeErrorResponse();
-        palindromeErrorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
-        palindromeErrorResponse.setMessage(exception.getMessage());
-        palindromeErrorResponse.setTimestamp(Instant.now().toEpochMilli());
-        return new ResponseEntity<>(palindromeErrorResponse, HttpStatus.BAD_REQUEST);
+    public ResponseEntity<ErrorResponse> handleException(InvalidArgumentException exception) {
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
+        errorResponse.setMessage(exception.getMessage());
+        errorResponse.setTimestamp(Instant.now().toEpochMilli());
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
     // Spring boot uses jackson for (Json, Java pojo) mapping

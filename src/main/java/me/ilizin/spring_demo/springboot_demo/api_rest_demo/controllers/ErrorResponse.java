@@ -1,14 +1,14 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
-public class PalindromeErrorResponse {
+public class ErrorResponse {
 
     private int status;
     private String message;
     private long timestamp;
 
-    public PalindromeErrorResponse() {}
+    public ErrorResponse() {}
 
-    public PalindromeErrorResponse(int status, long timestamp, String message) {
+    public ErrorResponse(int status, long timestamp, String message) {
         this.status = status;
         this.timestamp = timestamp;
         this.message = message;

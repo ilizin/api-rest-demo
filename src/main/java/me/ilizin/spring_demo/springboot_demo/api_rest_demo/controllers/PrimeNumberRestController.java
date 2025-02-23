@@ -2,10 +2,11 @@ package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPrimeNumberService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.Instant;
 
 @RestController
 @RequestMapping("/api")
@@ -20,6 +21,15 @@ public class PrimeNumberRestController {
     @Autowired
     void setPrimeNumberService(IPrimeNumberService primeNumberService) {
         this.primeNumberService = primeNumberService;
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResponse> handleGenericException(Exception exception) {
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
+        errorResponse.setMessage(exception.getMessage());
+        errorResponse.setTimestamp(Instant.now().toEpochMilli());
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping("/prime/{value}")
