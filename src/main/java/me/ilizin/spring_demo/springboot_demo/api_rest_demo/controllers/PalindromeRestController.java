@@ -30,6 +30,7 @@ public class PalindromeRestController {
         this.palindromeService = palindromeService;
     }
 
+    // Spring boot uses jackson for (Json, Java pojo) mapping
     @Operation(summary = "Check if a string is palindrome or not",
             description = "Return true if the string is palindrome, else false")
     @GetMapping("/palindrome/{value}")
