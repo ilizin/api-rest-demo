@@ -11,7 +11,7 @@
 	<artifactId>api-rest-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api-rest-demo</name>
-	<description>Demo project for setting up an api rest with Spring Boot</description>
+	<description>A demo project for setting up an api rest with Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
