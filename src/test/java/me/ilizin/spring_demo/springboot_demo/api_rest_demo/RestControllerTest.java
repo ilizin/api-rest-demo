@@ -7,10 +7,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.ResultMatcher;
+
+import java.util.stream.Stream;
 
 /* Another useful approach is to not start the server at all but to test only the layer below that,
    where Spring handles the incoming HTTP request and hands it off to your controller. That way, almost all of the
@@ -19,17 +27,29 @@ import org.springframework.test.web.servlet.MockMvc;
    to be injected for you by using the @AutoConfigureMockMvc annotation on the test case. */
 @SpringBootTest(classes = ApiRestDemoApplication.class)
 @AutoConfigureMockMvc(addFilters = false) // addFilters=false disables the spring security
-public class PalindromeRestControllerTest {
-    // In this test, the full Spring application context is started but without the server.
+public class RestControllerTest {
+
+    private static final String BASE_URL = "/api/palindrome/";
+
+    private static Stream<Arguments> isPalindromeArguments() {
+        return Stream.of(
+                Arguments.of("rotavator", "true", status().isOk()),
+                Arguments.of("DylanDog", "false", status().isOk()),
+                Arguments.of("1000", "false", status().isBadRequest())
+        );
+    }
+
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
-    void shouldReturnDefaultMessage() throws Exception {
+    @ParameterizedTest
+    @MethodSource("isPalindromeArguments")
+    void isPalindrome(String word, String expectedResult, ResultMatcher expectedState) throws Exception {
         //As we don't start the server, the URLs won't be prefixed with the context-path
-        this.mockMvc.perform(get("/api/palindrome/radar"))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().string(containsString("true")));
+        ResultActions resultActions = this.mockMvc.perform(get(BASE_URL + word));
+        resultActions.andExpect(expectedState);
+        if (expectedState == status().isOk()) {
+            resultActions.andExpect(content().string(containsString(expectedResult)));
+        }
     }
 }
