@@ -1,19 +1,17 @@
-package me.ilizin.spring_demo.springboot_demo.api_rest_demo;
+package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.junit.jupiter.api.Test;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.ApiRestDemoApplication;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.ResultMatcher;
@@ -25,9 +23,9 @@ import java.util.stream.Stream;
    full stack is used, and your code will be called in exactly the same way as if it were processing a real
    HTTP request but without the cost of starting the server. To do that, use Spring’s MockMvc and ask for that
    to be injected for you by using the @AutoConfigureMockMvc annotation on the test case. */
-@SpringBootTest(classes = ApiRestDemoApplication.class)
-@AutoConfigureMockMvc(addFilters = false) // addFilters=false disables the spring security
-public class RestControllerTest {
+@SpringBootTest
+@AutoConfigureMockMvc(addFilters = false) // addFilters=false disables the spring security //TODO Improve this
+public class PalindromeRestControllerTest {
 
     private static final String BASE_URL = "/api/palindrome/";
 
@@ -35,7 +33,7 @@ public class RestControllerTest {
         return Stream.of(
                 Arguments.of("rotavator", "true", status().isOk()),
                 Arguments.of("DylanDog", "false", status().isOk()),
-                Arguments.of("1000", "false", status().isBadRequest())
+                Arguments.of("1000", null, status().isBadRequest())
         );
     }
 
@@ -48,7 +46,7 @@ public class RestControllerTest {
         //As we don't start the server, the URLs won't be prefixed with the context-path
         ResultActions resultActions = this.mockMvc.perform(get(BASE_URL + word));
         resultActions.andExpect(expectedState);
-        if (expectedState == status().isOk()) {
+        if (!word.equals("1000")) { //TODO Improve this, find a more elegant solution
             resultActions.andExpect(content().string(containsString(expectedResult)));
         }
     }
