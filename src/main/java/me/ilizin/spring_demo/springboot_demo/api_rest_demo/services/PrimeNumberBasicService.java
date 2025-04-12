@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Primary
 @Service
 // This is not necessary because the scope is singleton by default
-// The prototype scope creates an object or each injection
+// The prototype scope creates an object for each injection
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class PrimeNumberBasicService implements IPrimeNumberService {
     @Override
