@@ -2,10 +2,45 @@
 
 This demo project shows how to build an api rest with springboot.
 
-Find the use o the following annotations:
+Find the use o the following annotations and properties:
 
-@Configuration, @Bean, @RestController, @Value, @Autowired, @Qualifier, @GetMapping, @PathVariable, @Lazy, @Service,
-@PostConstruct, @PreDestroy, @Primary, @Scope, @SpringBootApplication
+<img src="https://img.shields.io/badge/@Configuration-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Bean-8A2BE2"/>
+<img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Value-8A2BE2"/> <br/>
+<img src="https://img.shields.io/badge/@Autowired-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Qualifier-8A2BE2"/>
+<img src="https://img.shields.io/badge/@GetMapping-8A2BE2"/>
+<img src="https://img.shields.io/badge/@PathVariable-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Lazy-8A2BE2"/><br/>
+<img src="https://img.shields.io/badge/@Service-8A2BE2"/>
+<img src="https://img.shields.io/badge/@PostConstruct-8A2BE2"/>
+<img src="https://img.shields.io/badge/@PreDestroy-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Primary-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Scope-8A2BE2"/>
+<img src="https://img.shields.io/badge/@SpringBootApplication-8A2BE2"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/management.endpoints.web.exposure.include-008000"/>
+<img src="https://img.shields.io/badge/management.info.env.enabled-008000"/>
+<img src="https://img.shields.io/badge/management.endpoints.web.exposure.exclude-008000"/><br/>
+<img src="https://img.shields.io/badge/spring.security.user.name-008000"/>
+<img src="https://img.shields.io/badge/spring.security.user.password-008000"/>
+<img src="https://img.shields.io/badge/server.port-008000"/>
+<img src="https://img.shields.io/badge/server.servlet.context--path-008000"/>
+<img src="https://img.shields.io/badge/server.servlet.session.timeout-008000"/><br/>
+<img src="https://img.shields.io/badge/logging.level-008000"/>
+<img src="https://img.shields.io/badge/logging.file.name-008000"/>
+<img src="https://img.shields.io/badge/spring.main.lazy--initialization-008000"/>
+<img src="https://img.shields.io/badge/spring.application.name-008000"/>
+<img src="https://img.shields.io/badge/spring.main.banner--mode-008000"/><br/>
+<img src="https://img.shields.io/badge/logging.level-008000"/>
+<img src="https://img.shields.io/badge/spring.banner.location-008000"/>
+<img src="https://img.shields.io/badge/springdoc.swagger--ui.enabled-008000"/>
+<img src="https://img.shields.io/badge/spring.banner.location-008000"/>
+<img src="https://img.shields.io/badge/springdoc.api--docs.enabled=-008000"/>
+
 
 ## Description
 
