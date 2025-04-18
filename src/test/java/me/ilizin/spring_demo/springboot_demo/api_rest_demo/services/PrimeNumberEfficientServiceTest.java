@@ -8,27 +8,32 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PrimeNumberBasicServiceTest {
-
+public class PrimeNumberEfficientServiceTest {
     private static Stream<Arguments> isPrime() {
         return Stream.of(
                 Arguments.of(9, false),
                 Arguments.of(4, false),
                 Arguments.of(11, true),
+                Arguments.of(1, false),
+                Arguments.of(5, true),
+                Arguments.of(21, false),
+                Arguments.of(23, true),
+                Arguments.of(10, false),
+                Arguments.of(33, false),
                 Arguments.of(101, true)
         );
     }
 
-    private final PrimeNumberBasicService primeNumberBasicService;
+    private final PrimeNumberEfficientService primeNumberEfficientService;
 
-    public PrimeNumberBasicServiceTest() {
-        this.primeNumberBasicService = new PrimeNumberBasicService();
+    public PrimeNumberEfficientServiceTest() {
+        this.primeNumberEfficientService = new PrimeNumberEfficientService();
     }
 
     @ParameterizedTest
     @MethodSource("isPrime")
     public void isPrime(int value, boolean expectedResult) {
-        assertThat(primeNumberBasicService.isPrime(value))
+        assertThat(primeNumberEfficientService.isPrime(value))
                 .isEqualTo(expectedResult);
     }
 }

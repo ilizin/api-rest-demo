@@ -9,12 +9,30 @@ public class PrimeNumberEfficientService implements IPrimeNumberService {
         if (value <= 1) {
             return false;
         }
-        boolean[] primes = new boolean[value + 1];
-        primes[2] = true;
-        int i = 2;
-        while (i <= value) {
-
+        Boolean[] primes = new Boolean[value];
+        primes[0] = false;
+        int i = 1;
+        primes[1] = true;
+        while (i < value) {
+            if (primes[i] == null) {
+                primes[i] = true;
+            }
+            int j = 2;
+            boolean end = false;
+            while (!end) {
+                int k = (i + 1) * j;
+                if (k == value) {
+                    return false;
+                } else
+                if (k < value) {
+                    primes[k - 1] = false;
+                    j++;
+                } else {
+                    end = true;
+                }
+            }
+            i++;
         }
-        return false;
+        return primes[value - 1];
     }
 }
