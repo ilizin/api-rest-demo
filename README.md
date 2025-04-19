@@ -1,11 +1,12 @@
 # api-rest-demo
 
-This demo project shows how to build an api rest with springboot.
+This demo project shows how to easily build an api rest with springboot.
 
-Find the use o the following annotations and properties:
+Springboot is full of <span style="color:#8A2BE2">annotations</span> and <span style="color:#008000">properties</span>, 
+find how to use the following:
 
 <img src="https://img.shields.io/badge/@Configuration-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Bean-8A2BE2"/>
+<img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
 <img src="https://img.shields.io/badge/@Value-8A2BE2"/> <br/>
 <img src="https://img.shields.io/badge/@Autowired-8A2BE2"/>
@@ -19,9 +20,7 @@ Find the use o the following annotations and properties:
 <img src="https://img.shields.io/badge/@Primary-8A2BE2"/>
 <img src="https://img.shields.io/badge/@Scope-8A2BE2"/>
 <img src="https://img.shields.io/badge/@SpringBootApplication-8A2BE2"/>
-
-<br/><br/>
-
+<br/>
 <img src="https://img.shields.io/badge/management.endpoints.web.exposure.include-008000"/>
 <img src="https://img.shields.io/badge/management.info.env.enabled-008000"/>
 <img src="https://img.shields.io/badge/management.endpoints.web.exposure.exclude-008000"/><br/>
