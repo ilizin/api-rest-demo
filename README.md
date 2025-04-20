@@ -38,7 +38,7 @@ find how to use the following:
 <img src="https://img.shields.io/badge/spring.banner.location-008000"/>
 <img src="https://img.shields.io/badge/springdoc.swagger--ui.enabled-008000"/>
 <img src="https://img.shields.io/badge/spring.banner.location-008000"/>
-<img src="https://img.shields.io/badge/springdoc.api--docs.enabled=-008000"/>
+<img src="https://img.shields.io/badge/springdoc.api--docs.enabled-008000"/>
 
 
 ## Description
@@ -47,16 +47,17 @@ find how to use the following:
 
 ## Usage
 
-* Have the application installed on your machine
-* Run the <i>mvn spring-boot:run</i> command
-* Validate the console shows the message that the application is started
+1. Have the application installed on your machine
+2. Run the <i>mvn spring-boot:run</i> command
+3. Validate the console shows a message indicating the application is started:
 ```
 ilizin@ilizin:~/repos/api-rest-demo$ mvn spring-boot:run
 [INFO] Scanning for projects...
 ....
-2025-02-15T16:24:39.989+01:00  INFO 24399 --- [api-rest-demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api-rest-demo'
-2025-02-15T16:24:40.012+01:00  INFO 24399 --- [api-rest-demo] [           main] m.i.s.s.a.ApiRestDemoApplication         : Started ApiRestDemoApplication in 2.776 seconds (process running for 3.093)
+2025-04-20T08:30:39.687+02:00  INFO 22208 --- [api-rest-demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api-rest-demo'
+2025-04-20T08:30:39.703+02:00  INFO 22208 --- [api-rest-demo] [           main] m.i.s.s.a.ApiRestDemoApplication         : Started ApiRestDemoApplication in 3.639 seconds (process running for 4.322)
 ```
+4. Access the swagger UI page from the link: http://localhost:8081/api-rest-demo/swagger-ui/index.html
 
 ## Structure
 
@@ -76,10 +77,8 @@ Contributions are welcome! If you have an alternative solution or an improvement
 
 GitHub: [ilizin](https://github.com/ilizin)
 
-## Acknowledgments
+## References
 
-## Additional information
-
-* http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf
-* https://spring.io/guides/gs/testing-web
-* https://www.baeldung.com/cs/prime-number-algorithms
+* Mauro Saita. (Unknown). *Algoritmo di Erone.* Retrieved from http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf
+* Spring. (Unknown). *Testing the Web Layer.* Retrieved from https://spring.io/guides/gs/testing-web
+* Akbar Karimi. (Unknown). *Fastest Algorithm to Find Prime Numbers.* Retrieved from https://www.baeldung.com/cs/prime-number-algorithms
