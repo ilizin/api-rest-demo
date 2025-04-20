@@ -14,6 +14,7 @@ import java.time.Instant;
 @ControllerAdvice
 public class GenericExceptionHandler {
 
+    /* @Controller and @ControllerAdvice classes can have @ExceptionHandler methods to handle exceptions from controller methods. */
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleGenericException(Exception exception) {
         ErrorResponse errorResponse = new ErrorResponse();
