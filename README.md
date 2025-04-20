@@ -7,6 +7,8 @@ Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations<
 
 <img src="https://img.shields.io/badge/@Configuration-8A2BE2"/>
 <img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
+<img src="https://img.shields.io/badge/@ControllerAdvice-8A2BE2"/> 
+<img src="https://img.shields.io/badge/@ExceptionHandler-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
 <img src="https://img.shields.io/badge/@Value-8A2BE2"/> <br/>
 <img src="https://img.shields.io/badge/@Autowired-8A2BE2"/>
@@ -80,5 +82,7 @@ GitHub: [ilizin](https://github.com/ilizin)
 ## References
 
 * Mauro Saita. (Unknown). *Algoritmo di Erone.* Retrieved from http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf
-* Spring. (Unknown). *Testing the Web Layer.* Retrieved from https://spring.io/guides/gs/testing-web
+* Spring documentation. (Unknown). *Testing the Web Layer.* Retrieved from https://spring.io/guides/gs/testing-web
 * Akbar Karimi. (Unknown). *Fastest Algorithm to Find Prime Numbers.* Retrieved from https://www.baeldung.com/cs/prime-number-algorithms
+* Spring documentation. (Unknown). *Controller Advice.* Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-advice.html
+* Spring documentation. (Unknown). *Exceptions.* Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-exceptions.html

@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.time.Instant;
 
+/* Specialization of @Component for classes that declare @ExceptionHandler, @InitBinder, or @ModelAttribute methods
+   to be shared across multiple @Controller classes. By default, @ControllerAdvice apply to every request (that is, all controllers),
+   but you can narrow that down to a subset of controllers by using attributes on the annotation:
+   @ControllerAdvice(annotations = RestController.class) */
 @ControllerAdvice
 public class GenericExceptionHandler {
 

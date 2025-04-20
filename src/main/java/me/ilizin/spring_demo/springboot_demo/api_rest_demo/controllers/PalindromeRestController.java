@@ -34,7 +34,7 @@ public class PalindromeRestController {
     }
 
     /* handleException --> the exception handler method
-    *  PalindromeErrorResponse --> type of the response body
+    *  ErrorResponse --> type of the response body
     *  InvalidArgumentException --> exception type to handle/catch */
     @ExceptionHandler
     public ResponseEntity<ErrorResponse> handleException(InvalidArgumentException exception) {
