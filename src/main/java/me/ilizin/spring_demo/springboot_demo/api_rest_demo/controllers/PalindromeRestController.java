@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
 
+/* HTTP requests are handled by a @Controller.
+   A convenience annotation that is itself annotated with @Controller and @ResponseBody. */
 @RestController
 @RequestMapping("/api")
 public class PalindromeRestController {
