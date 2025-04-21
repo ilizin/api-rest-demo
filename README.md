@@ -10,6 +10,7 @@ Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations<
 <img src="https://img.shields.io/badge/@ControllerAdvice-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@ExceptionHandler-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
+<img src="https://img.shields.io/badge/@RequestMapping-8A2BE2"/>
 <img src="https://img.shields.io/badge/@Value-8A2BE2"/> <br/>
 <img src="https://img.shields.io/badge/@Autowired-8A2BE2"/>
 <img src="https://img.shields.io/badge/@Qualifier-8A2BE2"/>
