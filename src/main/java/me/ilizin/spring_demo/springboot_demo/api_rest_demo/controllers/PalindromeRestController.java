@@ -1,6 +1,8 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,6 +55,11 @@ public class PalindromeRestController {
     // Spring boot uses jackson for (Json, Java pojo) mapping
     @Operation(summary = "Check if a string is palindrome or not",
             description = "Return true if the string is palindrome, else false")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful string evaluation"),
+            @ApiResponse(responseCode = "400", description = "Bad request - Invalid string provided"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @GetMapping("/palindrome/{value}")
     public boolean isPalindrome(@PathVariable String value) {
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
