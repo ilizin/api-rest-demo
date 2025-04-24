@@ -25,6 +25,7 @@ import java.time.Instant;
 public class PalindromeRestController {
     private static final Logger logger = LoggerFactory.getLogger(PalindromeRestController.class);
 
+    // @Value is typically used to inject externalized properties
     // Another dependency injection example
     @Value("${not.useful.property}")
     private String notUsefulProperty;
