@@ -35,7 +35,8 @@ public class PalindromeRestController {
 
     // Constructor for dependency injection
     // The autowired annotation is optional because we've only one constructor
-    // The Qualifier annotation is necessary because we've more than one PalindromeService implementation
+    // We've more IPalindromeService implementations, so Spring doesn’t know which bean to inject. To avoid this problem, there are several solutions;
+    // the @Qualifier annotation is one of them.
     @Autowired
     public PalindromeRestController(@Qualifier("palindromeRecursiveService") IPalindromeService palindromeService) {
         this.palindromeService = palindromeService;
@@ -53,7 +54,6 @@ public class PalindromeRestController {
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
-    // Spring boot uses jackson for (Json, Java pojo) mapping
     @Operation(summary = "Check if a string is palindrome or not",
             description = "Return true if the string is palindrome, else false")
     @ApiResponses(value = {
@@ -61,7 +61,9 @@ public class PalindromeRestController {
             @ApiResponse(responseCode = "400", description = "Bad request - Invalid string provided"),
             @ApiResponse(responseCode = "500", description = "Internal server error")
     })
+    // GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
     @GetMapping("/palindrome/{value}")
+    // Spring boot uses jackson for (Json, Java pojo) mapping
     public boolean isPalindrome(@PathVariable String value) {
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
         for(int i = 0; i < value.length(); i++) {
