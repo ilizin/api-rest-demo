@@ -64,6 +64,7 @@ public class PalindromeRestController {
     // GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
     @GetMapping("/palindrome/{value}")
     // Spring boot uses jackson for (Json, Java pojo) mapping
+    // The PathVariable annotation indicates that a method parameter should be bound to a URI template variable.
     public boolean isPalindrome(@PathVariable String value) {
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
         for(int i = 0; i < value.length(); i++) {
