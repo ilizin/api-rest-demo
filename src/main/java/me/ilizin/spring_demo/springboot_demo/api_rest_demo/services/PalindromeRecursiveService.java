@@ -26,13 +26,13 @@ public class PalindromeRecursiveService implements IPalindromeService {
         }
     }
 
-    // Add custom code during the bean initialization
+    /* Spring calls the methods annotated with PostConstruct only once, just after the initialization of bean properties. */
     @PostConstruct
     public void doStartupStuffStuff() {
         logger.debug("Doing some startup stuff");
     }
 
-    // Add custom code during the bean destruction
+    /* A method annotated with PreDestroy runs only once, just before Spring removes our bean from the application context. */
     @PreDestroy
     public void doCleanupStuff() {
         logger.debug("Doing some cleanup stuff");
