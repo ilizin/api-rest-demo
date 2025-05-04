@@ -5,8 +5,7 @@ This demo project shows how to easily build an api rest with springboot.
 Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations</span> and 
 <span style="color:#008000;font-weight:bold;">properties</span>, and you will find the code fully commented about how to use the following:
 
-<img src="https://img.shields.io/badge/@Configuration-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
+<img src="https://img.shields.io/badge/@Configuration-8A2BE2"/><img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@ControllerAdvice-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@ExceptionHandler-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
