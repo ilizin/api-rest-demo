@@ -81,9 +81,15 @@ GitHub: [ilizin](https://github.com/ilizin)
 
 ## References
 
-* Mauro Saita. (Unknown). *Algoritmo di Erone.* Retrieved from http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf
-* Spring documentation. (Unknown). *Testing the Web Layer.* Retrieved from https://spring.io/guides/gs/testing-web
-* Akbar Karimi. (Unknown). *Fastest Algorithm to Find Prime Numbers.* Retrieved from https://www.baeldung.com/cs/prime-number-algorithms
-* Spring documentation. (Unknown). *Controller Advice.* Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-advice.html
-* Spring documentation. (Unknown). *Exceptions.* Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-exceptions.html
-* Abhinav Pandey. (11-05-2024). *Setting Example and Description with Swagger.* Retrieved from https://www.baeldung.com/swagger-set-example-description
+* Mauro Saita. (Unknown). *Algoritmo di Erone.* 
+  Retrieved from http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf
+* Spring documentation. (Unknown). *Testing the Web Layer.* 
+  Retrieved from https://spring.io/guides/gs/testing-web
+* Akbar Karimi. (Unknown). *Fastest Algorithm to Find Prime Numbers.* 
+  Retrieved from https://www.baeldung.com/cs/prime-number-algorithms
+* Spring documentation. (Unknown). *Controller Advice.* 
+  Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-advice.html
+* Spring documentation. (Unknown). *Exceptions.* 
+  Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-exceptions.html
+* Abhinav Pandey. (11-05-2024). *Setting Example and Description with Swagger.* 
+  Retrieved from https://www.baeldung.com/swagger-set-example-description
