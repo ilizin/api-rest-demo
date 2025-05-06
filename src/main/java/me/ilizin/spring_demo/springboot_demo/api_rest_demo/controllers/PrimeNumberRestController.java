@@ -1,5 +1,6 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPrimeNumberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,8 @@ public class PrimeNumberRestController {
         this.primeNumberService = primeNumberService;
     }
 
+    @Operation(summary = "Check if a number ia prime",
+            description = "Check if a number ia prime")
     @GetMapping("/prime/{value}")
     public boolean isPalindrome(@PathVariable int value) {
         return primeNumberService.isPrime(value);

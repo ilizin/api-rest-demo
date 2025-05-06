@@ -15,7 +15,7 @@ public class SqrtRestController {
     }
 
     @Operation(summary = "Calculate the square roots",
-            description = "Calculate a number square roots with the Heron algorithm")
+            description = "Calculate the square roots using the Heron algorithm")
     @GetMapping("/sqrt/{value}")
     public double sqrt(@PathVariable int value) {
         return sqrtService.sqrt(value);
