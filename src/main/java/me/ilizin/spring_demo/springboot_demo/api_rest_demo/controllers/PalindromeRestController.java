@@ -3,6 +3,7 @@ package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ import java.time.Instant;
 /* You can use the @RequestMapping annotation to map requests to controllers methods. It has various attributes to match by URL,
    HTTP method, request parameters, headers, and media types. You can use it at the class level to express shared mappings or at the method level
    to narrow down to a specific endpoint mapping */
+@Tag(name = "palindrome")
 @RequestMapping("/api")
 public class PalindromeRestController {
     private static final Logger logger = LoggerFactory.getLogger(PalindromeRestController.class);

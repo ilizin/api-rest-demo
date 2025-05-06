@@ -1,10 +1,12 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Tag(name = "sqrt")
 @RequestMapping("/api")
 public class SqrtRestController {
 
