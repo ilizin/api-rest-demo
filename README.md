@@ -60,6 +60,11 @@ Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations<
 
 ## Installation
 
+1. Clone de repository:
+```
+git clone git@github.com:ilizin/api-rest-demo.git
+```
+
 ## Usage
 
 1. Have the application installed on your machine
