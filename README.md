@@ -7,7 +7,7 @@ Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations<
 
 <span style="color:#8A2BE2;font-weight:bold;">Spring annotations</span>
 
-<img src="https://img.shields.io/badge/@Configuration-8A2BE2"/><img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
+<img src="https://img.shields.io/badge/@Configuration-8A2BE2"/> <img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@ControllerAdvice-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@ExceptionHandler-8A2BE2"/> 
 <img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
@@ -28,16 +28,13 @@ Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations<
 
 <span style="color:#8A2BE2;font-weight:bold;">Test annotations</span>
 
-<img src="https://img.shields.io/badge/@SpringBootTest-8A2BE2"/>
-<img src="https://img.shields.io/badge/@AutoConfigureMockMvc-8A2BE2"/>
+<img src="https://img.shields.io/badge/@SpringBootTest-8A2BE2"/> <img src="https://img.shields.io/badge/@AutoConfigureMockMvc-8A2BE2"/>
 <img src="https://img.shields.io/badge/@ParameterizedTest-8A2BE2"/>
 <img src="https://img.shields.io/badge/@MethodSource-8A2BE2"/>
 
 <span style="color:#008000;font-weight:bold;">Properties</span>
-<br/>
 
-<img src="https://img.shields.io/badge/management.endpoints.web.exposure.include-008000"/>
-<img src="https://img.shields.io/badge/management.info.env.enabled-008000"/>
+<img src="https://img.shields.io/badge/management.endpoints.web.exposure.include-008000"/> <img src="https://img.shields.io/badge/management.info.env.enabled-008000"/>
 <img src="https://img.shields.io/badge/management.endpoints.web.exposure.exclude-008000"/><br/>
 <img src="https://img.shields.io/badge/spring.security.user.name-008000"/>
 <img src="https://img.shields.io/badge/spring.security.user.password-008000"/>
