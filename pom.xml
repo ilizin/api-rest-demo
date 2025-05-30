@@ -6,7 +6,7 @@
 		<groupId>me.ilizin.spring-demo.springboot-demo</groupId>
 		<artifactId>springboot-demos</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>../springboot-demos</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>api-rest-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
