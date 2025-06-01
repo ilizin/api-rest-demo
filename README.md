@@ -57,9 +57,21 @@ Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations<
 
 ## Installation
 
+1. Make sure have installed at lest the *jdk17*, this is necessary because the spring boot version is *3.4.1* 
+```
+ilizin@ilizin:~$ java -version
+openjdk version "17.0.2" 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
+ilizin@ilizin:~$ 
+```
 1. Clone de repository:
 ```
 git clone git@github.com:ilizin/api-rest-demo.git
+```
+2. Clone de parent project repository:
+```
+git clone git@github.com:ilizin/springboot-demos.git
 ```
 
 ## Usage
