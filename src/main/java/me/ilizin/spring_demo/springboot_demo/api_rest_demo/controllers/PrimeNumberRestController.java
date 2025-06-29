@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Tag(name = "prime")
+@Tag(name = "Prime controller")
 @RequestMapping("/api")
 public class PrimeNumberRestController {
 

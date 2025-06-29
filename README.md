@@ -120,3 +120,6 @@ GitHub: [ilizin](https://github.com/ilizin)
   Retrieved from https://docs.spring.io/spring-framework/reference/web/webflux/controller/ann-exceptions.html
 * Abhinav Pandey. (11-05-2024). *Setting Example and Description with Swagger.* <br/>
   Retrieved from https://www.baeldung.com/swagger-set-example-description
+* Sampada Wagde. (01-08-2024). *Spring REST Docs vs OpenAPI.* <br/>
+  Retrieved from https://www.baeldung.com/spring-rest-docs-vs-openapi
+  
