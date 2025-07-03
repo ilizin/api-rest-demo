@@ -1,7 +1,10 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -18,14 +21,13 @@ public class SqrtRestController {
         this.sqrtService = sqrtService;
     }
 
-    @Operation(summary = "Calculate the square roots",
-            description = "Calculate the square roots using the Heron algorithm")
+    @Operation(summary = "Calculate the square roots of a positive number",
+            description = "Calculate the square roots of a positive number using the Heron algorithm")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully calculation"),
-            @ApiResponse(responseCode = "404", description = "Not found - The product was not found")
+            @ApiResponse(responseCode = "200", description = "Successfully calculation")
     })
     @GetMapping("/sqrt/{value}")
-    public double sqrt(@PathVariable int value) {
+    public double sqrt(@Parameter(description = "A positive number", example = "4") @PathVariable int value) {
         return sqrtService.sqrt(value);
     }
 }
