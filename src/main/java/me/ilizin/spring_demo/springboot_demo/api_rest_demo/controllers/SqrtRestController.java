@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -27,7 +28,8 @@ public class SqrtRestController {
             @ApiResponse(responseCode = "200", description = "Successfully calculation")
     })
     @GetMapping("/sqrt/{value}")
-    public double sqrt(@Parameter(description = "A positive number", example = "4") @PathVariable int value) {
+    public double sqrt(@Parameter(description = "A positive number you want to calculate the square root", example = "4")
+                           @Validated @Positive @PathVariable int value) {
         return sqrtService.sqrt(value);
     }
 }

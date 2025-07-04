@@ -4,22 +4,12 @@ public class ErrorResponse {
 
     private int status;
     private String message;
-    private long timestamp;
 
     public ErrorResponse() {}
 
-    public ErrorResponse(int status, long timestamp, String message) {
+    public ErrorResponse(int status, String message) {
         this.status = status;
-        this.timestamp = timestamp;
         this.message = message;
-    }
-
-    public long getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
     }
 
     public String getMessage() {

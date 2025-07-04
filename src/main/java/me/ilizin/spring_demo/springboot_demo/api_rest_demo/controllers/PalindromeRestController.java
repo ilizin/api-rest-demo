@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.NotBlank;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
@@ -52,7 +54,6 @@ public class PalindromeRestController {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
         errorResponse.setMessage(exception.getMessage());
-        errorResponse.setTimestamp(Instant.now().toEpochMilli());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
@@ -67,7 +68,7 @@ public class PalindromeRestController {
     @GetMapping("/palindrome/{value}")
     // Spring boot uses jackson for (Json, Java pojo) mapping
     // The PathVariable annotation indicates that a method parameter should be bound to a URI template variable.
-    public boolean isPalindrome(@PathVariable String value) {
+    public boolean isPalindrome(@Validated @NotBlank @PathVariable String value) {
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
         for(int i = 0; i < value.length(); i++) {
             if (!Character.isLetter(value.charAt(i))) {
