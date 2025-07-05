@@ -25,7 +25,7 @@ import java.time.Instant;
    HTTP method, request parameters, headers, and media types. You can use it at the class level to express shared mappings or at the method level
    to narrow down to a specific endpoint mapping */
 @Tag(name = "Palindrome controller")
-@RequestMapping("/api")
+@RequestMapping("/v1")
 public class PalindromeRestController {
     private static final Logger logger = LoggerFactory.getLogger(PalindromeRestController.class);
 

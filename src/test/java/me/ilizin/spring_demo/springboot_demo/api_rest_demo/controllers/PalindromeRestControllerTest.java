@@ -24,7 +24,7 @@ import java.util.stream.Stream;
    HTTP request but without the cost of starting the server. To do that, use Spring’s MockMvc and ask for that
    to be injected for you by using the @AutoConfigureMockMvc annotation on the test case. */
 @SpringBootTest
-@AutoConfigureMockMvc(addFilters = false) // addFilters=false disables the spring security //TODO Improve this
+@AutoConfigureMockMvc
 public class PalindromeRestControllerTest {
 
     private static final String BASE_URL = "/api/palindrome/";

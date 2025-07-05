@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Tag(name = "Prime controller")
-@RequestMapping("/api")
+@RequestMapping("/v1")
 public class PrimeNumberRestController {
 
     private IPrimeNumberService primeNumberService;
