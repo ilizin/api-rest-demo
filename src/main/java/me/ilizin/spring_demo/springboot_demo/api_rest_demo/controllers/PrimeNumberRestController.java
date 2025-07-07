@@ -2,6 +2,8 @@ package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -27,7 +29,9 @@ public class PrimeNumberRestController {
 
     @Operation(summary = "Check if a number is a prime number")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully calculation")
+            @ApiResponse(responseCode = "200", description = "Successfully calculation",
+                    content = { @Content(mediaType = "application/json", schema =
+                    @Schema(example = "true")) })
     })
     @GetMapping("/prime/{value}")
     public boolean isPrime(@Parameter(description = "An integer number you want to check if it's prime", example = "11")
