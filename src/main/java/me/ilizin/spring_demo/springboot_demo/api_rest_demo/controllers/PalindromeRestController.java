@@ -1,6 +1,8 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -60,9 +62,12 @@ public class PalindromeRestController {
     @Operation(summary = "Check if a string is palindrome or not",
             description = "Return true if the string is palindrome, else false")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful string evaluation"),
-            @ApiResponse(responseCode = "400", description = "Bad request - Invalid string provided"),
-            @ApiResponse(responseCode = "500", description = "Internal server error")
+            @ApiResponse(responseCode = "200", description = "Successful string evaluation",
+                    content = { @Content(mediaType = "application/json", schema =
+                    @Schema(example = "true")) }),
+            @ApiResponse(responseCode = "400", description = "Wrong value argument, please only use letters",
+                    content = { @Content(mediaType = "application/json", schema =
+                    @Schema(implementation = ErrorResponse.class)) })
     })
     // GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
     @GetMapping("/palindrome/{value}")
