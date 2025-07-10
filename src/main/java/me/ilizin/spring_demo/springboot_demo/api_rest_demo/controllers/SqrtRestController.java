@@ -24,18 +24,18 @@ public class SqrtRestController {
     }
 
     @Operation(summary = "Calculate the square roots of a positive number",
-            description = "Calculate the square roots of a positive number using the Heron algorithm")
+               description = "Calculate the square roots of a positive number using the Heron algorithm")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully calculation",
-                        content = { @Content(mediaType = "application/json", schema =
-                                    @Schema(example = "2", implementation = Double.class)) }),
+                         content = { @Content(mediaType = "application/json", schema =
+                                     @Schema(example = "2", implementation = Double.class)) }),
             @ApiResponse(responseCode = "400", description = "Incorrect input value",
-                        content = { @Content(mediaType = "application/json", schema =
-                                    @Schema(implementation = ErrorResponse.class)) })
+                         content = { @Content(mediaType = "application/json", schema =
+                                     @Schema(implementation = ErrorResponse.class)) })
     })
     @GetMapping("/sqrt/{value}")
     public double sqrt(@Parameter(description = "A positive number you want to calculate the square root", example = "4")
-                           @Validated @Positive @PathVariable int value) {
+                           @Positive(message = "The value must be positive") @PathVariable int value) {
         return sqrtService.sqrt(value);
     }
 }

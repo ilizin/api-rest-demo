@@ -15,6 +15,10 @@ public class PalindromeRecursiveService implements IPalindromeService {
     }
 
     public boolean isPalindrome(String value) {
+        return isPalindromeRec(value.toLowerCase());
+    }
+
+    private boolean isPalindromeRec(String value) {
         int lastCharacterPosition = value.length() - 1;
         if (value.isEmpty() || value.length() == 1) {
             return true;

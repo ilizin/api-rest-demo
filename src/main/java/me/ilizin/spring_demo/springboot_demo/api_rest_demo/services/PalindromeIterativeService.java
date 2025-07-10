@@ -23,6 +23,7 @@ public class PalindromeIterativeService implements IPalindromeService {
     }
 
     public boolean isPalindrome(String value) {
+        value = value.toLowerCase();
         for (int i = 0; i < value.length() / 2; i++) {
             if (value.charAt(i) != value.charAt(value.length() - i - 1)) {
                 return false;

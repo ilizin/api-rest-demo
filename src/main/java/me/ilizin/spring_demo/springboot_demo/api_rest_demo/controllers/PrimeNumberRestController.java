@@ -27,15 +27,16 @@ public class PrimeNumberRestController {
         this.primeNumberService = primeNumberService;
     }
 
-    @Operation(summary = "Check if a number is a prime number")
+    @Operation(summary = "Check if a number is a prime number",
+               description = "Return true if the number is prime else return false")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully calculation",
                     content = { @Content(mediaType = "application/json", schema =
-                    @Schema(example = "true")) })
+                                @Schema(example = "true")) })
     })
     @GetMapping("/prime/{value}")
     public boolean isPrime(@Parameter(description = "An integer number you want to check if it's prime", example = "11")
-                               @PathVariable int value) {
+                           @PathVariable int value) {
         return primeNumberService.isPrime(value);
     }
 }
