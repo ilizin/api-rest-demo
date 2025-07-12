@@ -66,7 +66,7 @@ public class PalindromeRestController {
             @ApiResponse(responseCode = "200", description = "Successful string evaluation",
                     content = { @Content(mediaType = "application/json", schema =
                                 @Schema(example = "true")) }),
-            @ApiResponse(responseCode = "400", description = "Wrong value argument, please only use letters",
+            @ApiResponse(responseCode = "400", description = "Incorrect input value",
                     content = { @Content(mediaType = "application/json", schema =
                                 @Schema(implementation = ErrorResponse.class)) })
     })

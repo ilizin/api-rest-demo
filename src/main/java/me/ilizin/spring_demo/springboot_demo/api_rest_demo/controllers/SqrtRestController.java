@@ -34,8 +34,8 @@ public class SqrtRestController {
                                      @Schema(implementation = ErrorResponse.class)) })
     })
     @GetMapping("/sqrt/{value}")
-    public double sqrt(@Parameter(description = "A positive number you want to calculate the square root", example = "4")
-                           @Positive(message = "The value must be positive") @PathVariable int value) {
+    public double sqrt(@Parameter(description = "A positive number the square root must be calculated", example = "4")
+                       @PathVariable @Positive(message = "The value must be positive")  int value) {
         return sqrtService.sqrt(value);
     }
 }
