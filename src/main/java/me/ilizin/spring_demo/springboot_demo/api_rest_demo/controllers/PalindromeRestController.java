@@ -3,6 +3,7 @@ package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -16,7 +17,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
@@ -68,7 +68,9 @@ public class PalindromeRestController {
                                 @Schema(example = "true")) }),
             @ApiResponse(responseCode = "400", description = "Incorrect input value",
                     content = { @Content(mediaType = "application/json", schema =
-                                @Schema(implementation = ErrorResponse.class)) })
+                                @Schema(implementation = ErrorResponse.class),
+                                        examples = { @ExampleObject(value = "{\"status\": 400, \"message\":\"Wrong '1981' argument, please only use letters\"}")})
+             })
     })
     // GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
     @GetMapping("/palindrome/{value}")

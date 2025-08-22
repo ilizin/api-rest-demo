@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 public class ErrorResponse {
 
-    @Schema(description = "The error status code", example = "404")
+    @Schema(description = "The error status code", example = "400")
     private int status;
     @Schema(description = "The error message", example = "The value must be positive")
     private String message;
