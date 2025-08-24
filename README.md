@@ -63,7 +63,7 @@ $ mvn clean install
 
 ## Usage
 
-1. Have the project installed on your machine.
+1. Have the project installed on your machine, see [Installation](##Installation)
 2. Run the <i>mvn spring-boot:run</i> command to start it.
 3. Validate the console shows a message indicating the project is up and running:
 ```
