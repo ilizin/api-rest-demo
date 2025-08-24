@@ -2,56 +2,16 @@
 
 This demo project shows how to easily build an api rest with springboot.
 
-Springboot is full of <span style="color:#8A2BE2;font-weight:bold;">annotations</span> and 
-<span style="color:#008000;font-weight:bold;">properties</span>, and you will find the code fully commented about how to use the following:
+Springboot is full of properties and annotations, find the code fully commented about how to use a bunch of them.
 
-<span style="color:#8A2BE2;font-weight:bold;">Spring annotations</span>
+**Annotations:** @Configuration, @ControllerAdvice, @ExceptionHandler, @RestController, @RequestMapping, @Value, @Autowired, @Qualifier, 
+@GetMapping, @PathVariable, @Lazy. @Service, @PostConstruct, @PreDestroy, @Primary, @Scope, @SpringBootApplication, 
+@SpringBootTest, @AutoConfigureMockMvc
 
-<img src="https://img.shields.io/badge/@Configuration-8A2BE2"/> <img src="https://img.shields.io/badge/@Bean-8A2BE2"/> 
-<img src="https://img.shields.io/badge/@ControllerAdvice-8A2BE2"/> 
-<img src="https://img.shields.io/badge/@ExceptionHandler-8A2BE2"/> 
-<img src="https://img.shields.io/badge/@RestController-8A2BE2"/>
-<img src="https://img.shields.io/badge/@RequestMapping-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Value-8A2BE2"/> <br/>
-<img src="https://img.shields.io/badge/@Autowired-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Qualifier-8A2BE2"/>
-<img src="https://img.shields.io/badge/@GetMapping-8A2BE2"/>
-<img src="https://img.shields.io/badge/@PathVariable-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Lazy-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Service-8A2BE2"/>
-<img src="https://img.shields.io/badge/@PostConstruct-8A2BE2"/>
-<img src="https://img.shields.io/badge/@PreDestroy-8A2BE2"/><br/>
-<img src="https://img.shields.io/badge/@Primary-8A2BE2"/>
-<img src="https://img.shields.io/badge/@Scope-8A2BE2"/>
-<img src="https://img.shields.io/badge/@SpringBootApplication-8A2BE2"/>
-<br/>
-
-<span style="color:#8A2BE2;font-weight:bold;">Test annotations</span>
-
-<img src="https://img.shields.io/badge/@SpringBootTest-8A2BE2"/> <img src="https://img.shields.io/badge/@AutoConfigureMockMvc-8A2BE2"/>
-<img src="https://img.shields.io/badge/@ParameterizedTest-8A2BE2"/>
-<img src="https://img.shields.io/badge/@MethodSource-8A2BE2"/>
-
-<span style="color:#008000;font-weight:bold;">Properties</span>
-
-<img src="https://img.shields.io/badge/management.endpoints.web.exposure.include-008000"/> <img src="https://img.shields.io/badge/management.info.env.enabled-008000"/>
-<img src="https://img.shields.io/badge/management.endpoints.web.exposure.exclude-008000"/><br/>
-<img src="https://img.shields.io/badge/spring.security.user.name-008000"/>
-<img src="https://img.shields.io/badge/spring.security.user.password-008000"/>
-<img src="https://img.shields.io/badge/server.port-008000"/>
-<img src="https://img.shields.io/badge/server.servlet.context--path-008000"/>
-<img src="https://img.shields.io/badge/server.servlet.session.timeout-008000"/><br/>
-<img src="https://img.shields.io/badge/logging.level-008000"/>
-<img src="https://img.shields.io/badge/logging.file.name-008000"/>
-<img src="https://img.shields.io/badge/spring.main.lazy--initialization-008000"/>
-<img src="https://img.shields.io/badge/spring.application.name-008000"/>
-<img src="https://img.shields.io/badge/spring.main.banner--mode-008000"/><br/>
-<img src="https://img.shields.io/badge/logging.level-008000"/>
-<img src="https://img.shields.io/badge/spring.banner.location-008000"/>
-<img src="https://img.shields.io/badge/springdoc.swagger--ui.enabled-008000"/>
-<img src="https://img.shields.io/badge/spring.banner.location-008000"/>
-<img src="https://img.shields.io/badge/springdoc.api--docs.enabled-008000"/>
-
+**Properties:** management.endpoints.web.exposure.include, management.info.env.enabled, management.endpoints.web.exposure.exclude, 
+spring.security.user.name, spring.security.user.password, server.port, server.servlet.context-path, server.servlet.session.timeout,
+logging.level, logging.file.name, spring.main.lazy-initialization, spring.application.name, spring.main.banner-mode, logging.level, 
+spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, springdoc.api-docs.enabled
 
 ## Description
 
