@@ -27,7 +27,7 @@ import java.util.stream.Stream;
 @AutoConfigureMockMvc
 public class PalindromeRestControllerTest {
 
-    private static final String BASE_URL = "/api/palindrome/";
+    private static final String BASE_URL = "/v1/palindrome/";
 
     private static Stream<Arguments> isPalindromeArguments() {
         return Stream.of(

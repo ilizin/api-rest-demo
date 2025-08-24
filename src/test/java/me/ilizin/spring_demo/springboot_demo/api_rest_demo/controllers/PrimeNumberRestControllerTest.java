@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class PrimeNumberRestControllerTest {
 
-    private static final String BASE_URL = "/api/prime/";
+    private static final String BASE_URL = "/v1/prime/";
 
     private static Stream<Arguments> primeArguments() {
         return Stream.of(

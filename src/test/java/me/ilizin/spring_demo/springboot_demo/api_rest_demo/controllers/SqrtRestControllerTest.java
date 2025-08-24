@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class SqrtRestControllerTest {
 
-    private static final String BASE_URL = "/api/sqrt/";
+    private static final String BASE_URL = "/v1/sqrt/";
 
     private static Stream<Arguments> sqrtArguments() {
         return Stream.of(

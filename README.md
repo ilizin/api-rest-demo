@@ -69,16 +69,43 @@ ilizin@ilizin:~$
 ```
 git clone git@github.com:ilizin/api-rest-demo.git
 ```
-2. Clone de parent project repository:
+2. Run the <i>mvn clean install</i> command to run the tests and install the project:
 ```
-git clone git@github.com:ilizin/springboot-demos.git
+ilio.zincone@OS-IZincone MINGW64 /c/ilio/repos/api-rest-demo (main)
+$ mvn clean install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------< org.springframework.boot:api-rest-demo >---------------
+[INFO] Building api-rest-demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+...
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ api-rest-demo ---
+[INFO] Building jar: C:\ilio\repos\api-rest-demo\target\api-rest-demo-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:3.4.1:repackage (repackage) @ api-rest-demo ---
+[INFO] Replacing main artifact C:\ilio\repos\api-rest-demo\target\api-rest-demo-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\ilio\repos\api-rest-demo\target\api-rest-demo-0.0.1-SNAPSHOT.jar.original
+[INFO]
+[INFO] --- install:3.1.3:install (default-install) @ api-rest-demo ---
+[INFO] Installing C:\ilio\repos\api-rest-demo\pom.xml to C:\Users\ilio.zincone\.m2\repository\org\springframework\boot\api-rest-demo\0.0.1-SNAPSHOT\api-rest-demo-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\ilio\repos\api-rest-demo\target\api-rest-demo-0.0.1-SNAPSHOT.jar to C:\Users\ilio.zincone\.m2\repository\org\springframework\boot\api-rest-demo\0.0.1-SNAPSHOT\api-rest-demo-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.041 s
+[INFO] Finished at: 2025-08-24T20:04:25+02:00
+[INFO] ------------------------------------------------------------------------
 ```
 
 ## Usage
 
-1. Have the application installed on your machine
-2. Run the <i>mvn spring-boot:run</i> command
-3. Validate the console shows a message indicating the application is started:
+1. Have the project installed on your machine.
+2. Run the <i>mvn spring-boot:run</i> command to start it.
+3. Validate the console shows a message indicating the project is up and running:
 ```
 ilizin@ilizin:~/repos/api-rest-demo$ mvn spring-boot:run
 [INFO] Scanning for projects...
