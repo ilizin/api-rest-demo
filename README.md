@@ -17,7 +17,7 @@ spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, sp
 
 ## Installation
 
-1. The project is based on spring boot <i>v3.4.1</i>, so make sure you have installed at least the required *jdk17*.
+1. The project is based on spring boot <i>v3.4.1</i>, so make sure you have installed at least the required *jdk17*:
 ```
 ilizin@ilizin:~$ java -version
 openjdk version "17.0.2" 2022-01-18
@@ -25,11 +25,25 @@ OpenJDK Runtime Environment (build 17.0.2+8-86)
 OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
 ilizin@ilizin:~$ 
 ```
-2. Clone de repository:
+
+2. Make sure you've installed the apache maven:
+```
+ilizin@ilizin /c
+$ mvn -v
+Apache Maven 3.9.10 (5f519b97e944483d878815739f519b2eade0a91d)
+Maven home: C:\apache-maven-3.9.10
+Java version: 17.0.2, vendor: Oracle Corporation, runtime: C:\java\jdk-17.0.2
+Default locale: es_ES, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+ilizin@ilizin /c
+```
+
+3. Clone de repository:
 ```
 git clone git@github.com:ilizin/api-rest-demo.git
 ```
-3. Run the <i>mvn clean install</i> command to run the tests and install the project:
+
+4. Run the <i>mvn clean install</i> command to run the tests and install the project:
 ```
 ilio.zincone@OS-IZincone MINGW64 /c/ilio/repos/api-rest-demo (main)
 $ mvn clean install
