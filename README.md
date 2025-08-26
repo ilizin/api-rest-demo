@@ -38,7 +38,7 @@ OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
 ilizin@ilizin /c
 ```
 
-3. Clone de repository:
+3. Clone the repository:
 ```
 git clone git@github.com:ilizin/api-rest-demo.git
 ```
