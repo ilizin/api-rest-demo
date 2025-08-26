@@ -1,8 +1,8 @@
 # api-rest-demo
 
-This demo project shows how to easily build an api rest with springboot.
+This demo project shows how easy is to build an api rest with springboot.
 
-Springboot is full of properties and annotations, find the code fully commented about how to use a bunch of them.
+Springboot is full of properties and annotations, find this code fully commented to document how to use a bunch of them.
 
 **Annotations:** @Configuration, @ControllerAdvice, @ExceptionHandler, @RestController, @RequestMapping, @Value, @Autowired, @Qualifier, 
 @GetMapping, @PathVariable, @Lazy. @Service, @PostConstruct, @PreDestroy, @Primary, @Scope, @SpringBootApplication, 
@@ -17,7 +17,7 @@ spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, sp
 
 ## Installation
 
-1. Make sure have installed at lest the *jdk17*, this is necessary because the spring boot version is *3.4.1* 
+1. The project is based on spring boot <i>v3.4.1</i>, so make sure you have installed at least the required *jdk17*.
 ```
 ilizin@ilizin:~$ java -version
 openjdk version "17.0.2" 2022-01-18
@@ -25,11 +25,11 @@ OpenJDK Runtime Environment (build 17.0.2+8-86)
 OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
 ilizin@ilizin:~$ 
 ```
-1. Clone de repository:
+2. Clone de repository:
 ```
 git clone git@github.com:ilizin/api-rest-demo.git
 ```
-2. Run the <i>mvn clean install</i> command to run the tests and install the project:
+3. Run the <i>mvn clean install</i> command to run the tests and install the project:
 ```
 ilio.zincone@OS-IZincone MINGW64 /c/ilio/repos/api-rest-demo (main)
 $ mvn clean install
