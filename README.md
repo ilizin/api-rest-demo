@@ -26,7 +26,8 @@ OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
 ilizin@ilizin:~$ 
 ```
 
-2. Make sure you've installed the apache maven:
+2. Make sure you've installed the apache maven, or refer to the official page [Install Maven](https://maven.apache.org/install.html)
+to install it.
 ```
 ilizin@ilizin /c
 $ mvn -v
