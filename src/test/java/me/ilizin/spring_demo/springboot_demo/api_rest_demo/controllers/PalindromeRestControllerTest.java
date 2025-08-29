@@ -5,7 +5,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import me.ilizin.spring_demo.springboot_demo.api_rest_demo.ApiRestDemoApplication;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -46,8 +45,8 @@ public class PalindromeRestControllerTest {
         //As we don't start the server, the URLs won't be prefixed with the context-path
         ResultActions resultActions = this.mockMvc.perform(get(BASE_URL + word));
         resultActions.andExpect(expectedState);
-        if (!word.equals("1000")) { //TODO Improve this, find a more elegant solution
-            resultActions.andExpect(content().string(containsString(expectedResult)));
+        if (!word.equals("1000")) {
+            resultActions.andExpect(content().string(expectedResult));
         }
     }
 }

@@ -41,7 +41,7 @@ public class PrimeNumberRestControllerTest {
         ResultActions resultActions = this.mockMvc.perform(get(BASE_URL + value));
         resultActions.andExpect(expectedState);
         if (!value.equals("bad_number")) {
-            resultActions.andExpect(content().string(containsString(expectedResult)));
+            resultActions.andExpect(content().string(expectedResult));
         }
     }
 }
