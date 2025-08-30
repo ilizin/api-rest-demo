@@ -46,7 +46,7 @@ git clone git@github.com:ilizin/api-rest-demo.git
 
 4. Run the <i>mvn clean install</i> command to run the tests and install the project:
 ```
-ilio.zincone@OS-IZincone MINGW64 /c/ilio/repos/api-rest-demo (main)
+ilizin@ilizin:~/repos/api-rest-demo (main)
 $ mvn clean install
 [INFO] Scanning for projects...
 [INFO]
