@@ -9,7 +9,7 @@
 		<relativePath>../springboot-demos</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>api-rest-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>api-rest-demo</name>
 	<description>A demo project for setting up an api rest with Spring Boot</description>
 	<url/>
