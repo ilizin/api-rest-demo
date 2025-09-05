@@ -13,6 +13,8 @@ spring.security.user.name, spring.security.user.password, server.port, server.se
 logging.level, logging.file.name, spring.main.lazy-initialization, spring.application.name, spring.main.banner-mode, logging.level, 
 spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, springdoc.api-docs.enabled
 
+This demo project goal is just didactic, so I encourage you to read the code, read all the comments, and learn from it.
+
 ## Description
 
 This demo project set up an easy API with three controllers where each provides a GET operation:
