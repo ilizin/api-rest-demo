@@ -15,6 +15,15 @@ spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, sp
 
 ## Description
 
+This demo project set up an easy API with three controllers where each provides a GET operation:
+
+* Palindrome controller
+  * GET v1/palindrome/{value}
+* Prime controller
+  * GET /v1/prime/{value}
+* Sqrt controller
+  * GET /v1/sqrt/{value}
+
 ## Installation
 
 1. The project is based on spring boot <i>v3.4.1</i>, so make sure you have installed at least the required *jdk17*:
