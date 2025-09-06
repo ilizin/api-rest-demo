@@ -17,7 +17,7 @@ This demo project goal is just didactic, so I encourage you to read the code, re
 
 ## Description
 
-This demo project set up an easy API with three controllers where each provides a GET operation:
+This demo project set up an easy API with three controllers and GET operation each:
 
 * Palindrome controller
   * GET v1/palindrome/{value}
