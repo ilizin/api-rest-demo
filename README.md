@@ -26,6 +26,8 @@ This demo project set up an easy API with three controllers and GET operation ea
 * Sqrt controller
   * GET /v1/sqrt/{value}
 
+[Swagger](https://petstore.swagger.io/?url=https://ilizin.github.io/api-rest-demo/doc/sample-api.yaml)
+
 ## Installation
 
 1. The project is based on spring boot <i>v3.4.1</i>, so make sure you have installed at least the required *jdk17*:
