@@ -17,16 +17,9 @@ This demo project goal is just didactic, so I encourage you to read the code, re
 
 ## Description
 
-This demo project set up an easy API with three controllers and GET operation each:
 
-* Palindrome controller
-  * GET v1/palindrome/{value}
-* Prime controller
-  * GET /v1/prime/{value}
-* Sqrt controller
-  * GET /v1/sqrt/{value}
 
-[Swagger](https://petstore.swagger.io/?url=https://ilizin.github.io/api-rest-demo/doc/sample-api.yaml)
+[Swagger](https://ilizin.github.io/api-rest-demo/)
 
 ## Installation
 
@@ -137,4 +130,6 @@ GitHub: [ilizin](https://github.com/ilizin)
   Retrieved from https://www.baeldung.com/swagger-set-example-description
 * Sampada Wagde. (01-08-2024). *Spring REST Docs vs OpenAPI.* <br/>
   Retrieved from https://www.baeldung.com/spring-rest-docs-vs-openapi
+* peter-evans. (Unknown). *How to host Swagger API documentation with GitHub Pages.* <br/>
+  Retrieved from https://github.com/peter-evans/swagger-github-pages
   
