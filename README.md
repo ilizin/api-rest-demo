@@ -2,7 +2,7 @@
 
 This demo project shows how easy is to build an api rest with springboot.
 
-Springboot is full of properties and annotations, find this code fully commented to document how to use a bunch of them.
+Springboot is full of properties and annotations, you will find the code fully commented on how to use a bunch of them.
 
 **Annotations:** @Configuration, @ControllerAdvice, @ExceptionHandler, @RestController, @RequestMapping, @Value, @Autowired, @Qualifier, 
 @GetMapping, @PathVariable, @Lazy. @Service, @PostConstruct, @PreDestroy, @Primary, @Scope, @SpringBootApplication, 
@@ -13,7 +13,7 @@ spring.security.user.name, spring.security.user.password, server.port, server.se
 logging.level, logging.file.name, spring.main.lazy-initialization, spring.application.name, spring.main.banner-mode, logging.level, 
 spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, springdoc.api-docs.enabled
 
-This demo project goal is just didactic, so I encourage you to read the code, read all the comments, and learn from it.
+This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
 ## Description
 
