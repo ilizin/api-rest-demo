@@ -17,9 +17,10 @@ This demo project goal is just didactic, so I encourage you to read the code, re
 
 ## Description
 
+This simple demo API project is fully described with an OpenAPI document, you can visualize it through the following swagger page https://ilizin.github.io/api-rest-demo/
 
-
-[Swagger](https://ilizin.github.io/api-rest-demo/)
+Thanks to @peter-evans to document how to host a swagger API documentation on GitHub Pages, more details at
+*References* section.
 
 ## Installation
 
