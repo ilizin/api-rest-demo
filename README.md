@@ -4,14 +4,46 @@ This demo project shows how easy is to build an api rest with springboot.
 
 Springboot is full of properties and annotations, you will find the code fully commented on how to use a bunch of them.
 
-**Annotations:** @Configuration, @ControllerAdvice, @ExceptionHandler, @RestController, @RequestMapping, @Value, @Autowired, @Qualifier, 
-@GetMapping, @PathVariable, @Lazy. @Service, @PostConstruct, @PreDestroy, @Primary, @Scope, @SpringBootApplication, 
-@SpringBootTest, @AutoConfigureMockMvc
+| Annotations            |  
+|------------------------|
+| @Configuration         | 
+| @ControllerAdvice      |    
+| @ExceptionHandler      | 
+| @RestController        |
+| @RequestMapping        | 
+| @Value                 | 
+| @Autowired             | 
+| @Qualifier             |
+| @GetMapping            | 
+| @PathVariable          | 
+| @Lazy                  |
+| @Service               |
+| @PostConstruct         | 
+| @PreDestroy            | 
+| @Primary               | 
+| @Scope                 |
+| @SpringBootApplication | 
+| @SpringBootTest        | 
+| @AutoConfigureMockMvc  | 
 
-**Properties:** management.endpoints.web.exposure.include, management.info.env.enabled, management.endpoints.web.exposure.exclude, 
-spring.security.user.name, spring.security.user.password, server.port, server.servlet.context-path, server.servlet.session.timeout,
-logging.level, logging.file.name, spring.main.lazy-initialization, spring.application.name, spring.main.banner-mode, logging.level, 
-spring.banner.location, springdoc.swagger-ui.enabled, spring.banner.location, springdoc.api-docs.enabled
+| Properties                                |  
+|-------------------------------------------|
+| management.endpoints.web.exposure.include | 
+| management.info.env.enabled               |    
+| management.endpoints.web.exposure.exclude | 
+| spring.security.user.name                 |
+| spring.security.user.password             | 
+| server.port                               | 
+| server.servlet.context-path               | 
+| server.servlet.session.timeout            |
+| logging.level                             | 
+| logging.file.name                         | 
+| spring.main.lazy-initialization           |
+| spring.application.name                   |
+| spring.main.banner-mode                   | 
+| spring.banner.location                    | 
+| springdoc.api-docs.enabled                | 
+| springdoc.swagger-ui.enabled              |
 
 This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
