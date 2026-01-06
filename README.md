@@ -4,8 +4,8 @@ This demo project shows how easy is to build an api rest with springboot.
 
 Springboot is full of properties and annotations, you will find the code fully commented on how to use a bunch of them.
 
-<table style="border: none;">
-<tr><td>
+<table>
+<tr style="border: none;"><td style="border: none;">
 
 | Annotations            |  
 |------------------------|
@@ -29,7 +29,7 @@ Springboot is full of properties and annotations, you will find the code fully c
 | @SpringBootTest        | 
 | @AutoConfigureMockMvc  | 
 
-</td><td>
+</td><td style="border: none;">
 
 | Properties                                |  
 |-------------------------------------------|
