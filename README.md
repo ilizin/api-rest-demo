@@ -4,7 +4,7 @@ This demo project shows how easy is to build an api rest with springboot.
 
 Springboot is full of properties and annotations, you will find the code fully commented on how to use a bunch of them.
 
-<table>
+<table style="border: none;">
 <tr style="border: none;"><td style="border: none;">
 
 | Annotations            |  
