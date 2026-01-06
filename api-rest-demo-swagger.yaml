@@ -10,9 +10,14 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   termsOfService: 'http://swagger.io/terms/'
-  externalDocs:
-    description: Find out more about Swagger
-    url: 'https://swagger.io/'
+
+externalDocs:
+  description: Find out more about Swagger
+  url: 'https://swagger.io/'
+
+tags:
+  - name: Sqrt controller
+  - name: Prime controller
 
 paths:
   /users:
