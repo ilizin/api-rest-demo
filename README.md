@@ -47,14 +47,14 @@ Springboot is full of properties and annotations, you will find the code fully c
 
 This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
-## Description
+## 📘 Description
 
 This simple demo API project is fully described with an OpenAPI document, you can visualize it through the following swagger page https://ilizin.github.io/api-rest-demo/
 
 Thanks to @peter-evans to document how to host a swagger API documentation on GitHub Pages, more details at
 *References* section.
 
-## Installation
+## 💾 Installation
 
 1. The project is based on spring boot <i>v3.4.1</i>, so make sure you have installed at least the required *jdk17*:
 ```
@@ -129,21 +129,11 @@ ilizin@ilizin:~/repos/api-rest-demo$ mvn spring-boot:run
 ```
 4. Access the swagger UI page from the link: http://localhost:8081/api-rest-demo/swagger-ui/index.html
 
-## Structure
+## 📂 Structure
 
 It's a maven based project, therefore the structure is standard, more details about the maven project director layout  [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 
-## Contributing
-
-Contributions are welcome! If you have an alternative solution or an improvement to an existing solution, feel free to contribute. Follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (git checkout -b feature-new-solution).
-3. Commit your changes (git commit -m 'Add new solution for problem X').
-4. Push to the branch (git push origin feature-new-solution).
-5. Open a pull request.
-
-## Contact
+## 📬 Contact
 
 GitHub: [ilizin](https://github.com/ilizin)
 
@@ -165,4 +155,8 @@ GitHub: [ilizin](https://github.com/ilizin)
   Retrieved from https://www.baeldung.com/spring-rest-docs-vs-openapi
 * peter-evans. (Unknown). *How to host Swagger API documentation with GitHub Pages.* <br/>
   Retrieved from https://github.com/peter-evans/swagger-github-pages
-  
+
+## 🙌 Acknowledgments
+
+Thank you to [Peter Evans](https://github.com/peter-evans/) for documenting how to host a swagger API documentation 
+on GitHub Pages.
