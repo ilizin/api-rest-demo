@@ -4,6 +4,9 @@ This demo project shows how easy is to build an api rest with springboot.
 
 Springboot is full of properties and annotations, you will find the code fully commented on how to use a bunch of them.
 
+<table>
+<tr><td>
+
 | Annotations            |  
 |------------------------|
 | @Configuration         | 
@@ -26,6 +29,8 @@ Springboot is full of properties and annotations, you will find the code fully c
 | @SpringBootTest        | 
 | @AutoConfigureMockMvc  | 
 
+</td><td>
+
 | Properties                                |  
 |-------------------------------------------|
 | management.endpoints.web.exposure.include | 
@@ -44,6 +49,8 @@ Springboot is full of properties and annotations, you will find the code fully c
 | spring.banner.location                    | 
 | springdoc.api-docs.enabled                | 
 | springdoc.swagger-ui.enabled              |
+
+</td></tr> </table>
 
 This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
