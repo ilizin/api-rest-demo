@@ -1,8 +1,18 @@
 openapi: 3.1.1
 info:
-  title: api-rest-demo
+  title: Api rest demo
   description: A demo project for setting up an api rest with Spring Boot.
   version: 1.0.0-SNAPSHOT
+  contact:
+    name: Contact the developer
+    url: 'https://github.com/ilizin'
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  termsOfService: 'http://swagger.io/terms/'
+  externalDocs:
+    description: Find out more about Swagger
+    url: 'https://swagger.io/'
 
 paths:
   /users:

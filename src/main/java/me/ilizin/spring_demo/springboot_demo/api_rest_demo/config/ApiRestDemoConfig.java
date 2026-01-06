@@ -24,7 +24,7 @@ public class ApiRestDemoConfig {
     @Bean
     public OpenAPI customOpenAPI(/*@Value("${springdoc.version}") String appVersion*/) {
         return new OpenAPI().info(new Info()
-                .version("1.0.0")
+                .version("1.0.0-SNAPSHOT")
                 .title("Api rest demo")
                 .description("A demo project for setting up an api rest with Spring Boot")
                 .contact(new Contact()
