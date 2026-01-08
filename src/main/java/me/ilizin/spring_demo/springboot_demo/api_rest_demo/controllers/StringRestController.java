@@ -19,18 +19,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.Instant;
-
 /* HTTP requests are handled by a @Controller.
    A convenience annotation that is itself annotated with @Controller and @ResponseBody. */
 @RestController
 /* You can use the @RequestMapping annotation to map requests to controllers methods. It has various attributes to match by URL,
    HTTP method, request parameters, headers, and media types. You can use it at the class level to express shared mappings or at the method level
    to narrow down to a specific endpoint mapping */
-@Tag(name = "Palindrome controller")
+@Tag(name = "String controller")
 @RequestMapping("/v1")
-public class PalindromeRestController {
-    private static final Logger logger = LoggerFactory.getLogger(PalindromeRestController.class);
+public class StringRestController {
+    private static final Logger logger = LoggerFactory.getLogger(StringRestController.class);
 
     // @Value is typically used to inject externalized properties
     // Another dependency injection example
@@ -45,7 +43,7 @@ public class PalindromeRestController {
     // We've more IPalindromeService implementations, so Spring doesn’t know which bean to inject. To avoid this problem, there are several solutions;
     // the @Qualifier annotation is one of them.
     @Autowired
-    public PalindromeRestController(@Qualifier("palindromeRecursiveService") IPalindromeService palindromeService) {
+    public StringRestController(@Qualifier("palindromeRecursiveService") IPalindromeService palindromeService) {
         this.palindromeService = palindromeService;
     }
 

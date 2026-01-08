@@ -1,9 +1,8 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.PalindromeRestController;
-import me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.PrimeNumberRestController;
-import me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.SqrtRestController;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.NumberRestController;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.StringRestController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,17 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ApiRestDemoApplicationTests {
 
 	@Autowired
-	private PalindromeRestController palindromeRestController;
+	private NumberRestController numberRestController;
 	@Autowired
-	private PrimeNumberRestController primeNumberRestController;
-	@Autowired
-	private SqrtRestController sqrtRestController;
+	private StringRestController stringRestController;
 
 	@Test
 	void contextLoads() {
-		assertThat(palindromeRestController).isNotNull();
-		assertThat(primeNumberRestController).isNotNull();
-		assertThat(sqrtRestController).isNotNull();
+		assertThat(numberRestController).isNotNull();
+		assertThat(stringRestController).isNotNull();
 	}
-
 }

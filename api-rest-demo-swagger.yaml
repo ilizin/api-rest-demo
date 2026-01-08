@@ -18,6 +18,7 @@ externalDocs:
 tags:
   - name: Sqrt controller
   - name: Prime controller
+  - name: Palindrome controller
 
 paths:
   /users:

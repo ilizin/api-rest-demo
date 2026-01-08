@@ -19,9 +19,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class SqrtRestControllerTest {
+public class NumberRestControllerTest {
 
-    private static final String BASE_URL = "/v1/sqrt/";
+    private static final String PRIME_URL = "/v1/prime/";
+    private static final String SQRT_URL = "/v1/sqrt/";
 
     private static Stream<Arguments> sqrtArguments() {
         return Stream.of(
@@ -31,13 +32,32 @@ public class SqrtRestControllerTest {
         );
     }
 
+    private static Stream<Arguments> primeArguments() {
+        return Stream.of(
+                Arguments.of("9", "false", status().isOk()),
+                Arguments.of("4", "false", status().isOk()),
+                Arguments.of("11", "true", status().isOk()),
+                Arguments.of("bad_number", null, status().isBadRequest())
+        );
+    }
+
     @Autowired
     private MockMvc mockMvc;
 
     @ParameterizedTest
+    @MethodSource("primeArguments")
+    void prime(String value, String expectedResult, ResultMatcher expectedState) throws Exception {
+        ResultActions resultActions = this.mockMvc.perform(get(PRIME_URL + value));
+        resultActions.andExpect(expectedState);
+        if (!value.equals("bad_number")) {
+            resultActions.andExpect(content().string(expectedResult));
+        }
+    }
+
+    @ParameterizedTest
     @MethodSource("sqrtArguments")
     void sqrt(String value, String expectedResult, ResultMatcher expectedState) throws Exception {
-        ResultActions resultActions = this.mockMvc.perform(get(BASE_URL + value));
+        ResultActions resultActions = this.mockMvc.perform(get(SQRT_URL + value));
         resultActions.andExpect(expectedState);
         if (!value.equals("bad_number")) {
             //TODO Improve this (convert to a number and validate)

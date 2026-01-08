@@ -1,6 +1,5 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
-import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -24,7 +23,7 @@ import java.util.stream.Stream;
    to be injected for you by using the @AutoConfigureMockMvc annotation on the test case. */
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PalindromeRestControllerTest {
+public class StringRestControllerTest {
 
     private static final String BASE_URL = "/v1/palindrome/";
 
