@@ -15,10 +15,6 @@ externalDocs:
   description: Find out more about Swagger
   url: 'https://swagger.io/'
 
-#tags:
- # - name: Number controller
- # - name: String controller
-
 paths:
   /v1/sqrt/{value}:
     get:
@@ -26,6 +22,11 @@ paths:
       description: Calculate the square roots of a positive number using the Heron algorithm
       tags:
         - Number controller
+      parameters:
+        - in: path
+          name: value
+          required: true
+          description: A positive number the square root must be calculated
       responses:
         "200": # status code
           description: A JSON array of user names
