@@ -144,7 +144,7 @@ It's a maven based project, therefore the structure is standard, more details ab
 
 GitHub: [ilizin](https://github.com/ilizin)
 
-## References
+## 🔗 References
 
 * Mauro Saita. (Unknown). *Algoritmo di Erone.* <br/>
   Retrieved from http://maurosaita.it/05quinta/matematica/appunti/algoritmo_di_Erone.pdf
