@@ -1,16 +1,3 @@
-<style>
-table {
-    border-collapse: collapse;
-}
-table, th, td {
-   border: none;
-}
-blockquote {
-    border-left: none;
-    padding-left: 10px;
-}
-</style>
-
 # api-rest-demo
 
 This demo project shows how easy is to build an api rest with springboot.
