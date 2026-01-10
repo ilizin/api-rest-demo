@@ -1,3 +1,12 @@
+<style>
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+   border: none;
+}
+</style>
+
 # api-rest-demo
 
 This demo project shows how easy is to build an api rest with springboot.
