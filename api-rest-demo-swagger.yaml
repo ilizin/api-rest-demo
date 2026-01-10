@@ -37,8 +37,7 @@ paths:
             application/json:
               schema:
                 type: integer
-              example:
-                4
+              example: 4
         "400": # status code
           description: Incorrect input value
           content:
@@ -90,8 +89,7 @@ paths:
             application/json:
               schema:
                 type: boolean
-              example:
-                true
+              example: true
         "400": # status code
           description: Incorrect input value
           content:
