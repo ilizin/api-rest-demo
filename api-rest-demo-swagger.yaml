@@ -38,7 +38,7 @@ paths:
               schema:
                 type: integer
               example:
-                value: 4
+                4
         "400": # status code
           description: Incorrect input value
           content:
@@ -91,7 +91,7 @@ paths:
               schema:
                 type: boolean
               example:
-                value: true
+                true
         "400": # status code
           description: Incorrect input value
           content:
