@@ -9,6 +9,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.NotBlank;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.ErrorResponseDTO;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.OkResponseDTO;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +20,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.Instant;
 
 /* HTTP requests are handled by a @Controller.
    A convenience annotation that is itself annotated with @Controller and @ResponseBody. */
@@ -51,8 +55,8 @@ public class StringRestController {
     *  ErrorResponse --> type of the response body
     *  InvalidArgumentException --> exception type to handle/catch */
     @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleException(InvalidArgumentException exception) {
-        ErrorResponse errorResponse = new ErrorResponse();
+    public ResponseEntity<ErrorResponseDTO> handleException(InvalidArgumentException exception) {
+        ErrorResponseDTO errorResponse = new ErrorResponseDTO();
         errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
         errorResponse.setMessage(exception.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
@@ -63,10 +67,11 @@ public class StringRestController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful string evaluation",
                     content = { @Content(mediaType = "application/json", schema =
-                                @Schema(example = "true")) }),
+                                @Schema(implementation = OkResponseDTO.class),
+                                        examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":\"10\"}")})}),
             @ApiResponse(responseCode = "400", description = "Incorrect input value",
                     content = { @Content(mediaType = "application/json", schema =
-                                @Schema(implementation = ErrorResponse.class),
+                                @Schema(implementation = ErrorResponseDTO.class),
                                         examples = { @ExampleObject(value = "{\"status\": 400, \"message\":\"Wrong '1981' argument, please only use letters\"}")})
              })
     })
@@ -74,8 +79,9 @@ public class StringRestController {
     @GetMapping("/palindrome/{value}")
     // Spring boot uses jackson for (Json, Java pojo) mapping
     // The PathVariable annotation indicates that a method parameter should be bound to a URI template variable.
-    public boolean isPalindrome(@Parameter(description = "A word to be checked if it's palindrome or not", example = "Level")
+    public OkResponseDTO isPalindrome(@Parameter(description = "A word to be checked if it's palindrome or not", example = "Level")
                                 @NotBlank @PathVariable String value) {
+        Instant start = Instant.now();
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
         for(int i = 0; i < value.length(); i++) {
             if (!Character.isLetter(value.charAt(i))) {
@@ -83,6 +89,8 @@ public class StringRestController {
                 throw new InvalidArgumentException(message);
             }
         }
-        return palindromeService.isPalindrome(value);
+        Instant end = Instant.now();
+        String response = String.valueOf(palindromeService.isPalindrome(value));
+        return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }
 }

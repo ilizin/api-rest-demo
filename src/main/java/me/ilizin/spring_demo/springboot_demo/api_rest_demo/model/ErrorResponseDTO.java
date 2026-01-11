@@ -1,17 +1,17 @@
-package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
+package me.ilizin.spring_demo.springboot_demo.api_rest_demo.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-public class ErrorResponse {
+public class ErrorResponseDTO {
 
     @Schema(description = "The error status code", example = "400")
     private int status;
     @Schema(description = "The error message", example = "The value must be positive")
     private String message;
 
-    public ErrorResponse() {}
+    public ErrorResponseDTO() {}
 
-    public ErrorResponse(int status, String message) {
+    public ErrorResponseDTO(int status, String message) {
         this.status = status;
         this.message = message;
     }
