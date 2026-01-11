@@ -29,8 +29,8 @@ public class StringRestControllerTest {
 
     private static Stream<Arguments> isPalindromeArguments() {
         return Stream.of(
-                Arguments.of("rotavator", "true", status().isOk()),
-                Arguments.of("DylanDog", "false", status().isOk()),
+                Arguments.of("rotavator", "{\"value\":\"true\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("DylanDog", "{\"value\":\"false\",\"responseTime\":0}", status().isOk()),
                 Arguments.of("1000", null, status().isBadRequest())
         );
     }

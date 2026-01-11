@@ -34,9 +34,9 @@ public class NumberRestControllerTest {
 
     private static Stream<Arguments> primeArguments() {
         return Stream.of(
-                Arguments.of("9", "false", status().isOk()),
-                Arguments.of("4", "false", status().isOk()),
-                Arguments.of("11", "true", status().isOk()),
+                Arguments.of("9", "{\"value\":\"false\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("4", "{\"value\":\"false\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("11", "{\"value\":\"true\",\"responseTime\":0}", status().isOk()),
                 Arguments.of("bad_number", null, status().isBadRequest())
         );
     }
