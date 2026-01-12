@@ -107,5 +107,5 @@ paths:
               schema:
                 type: array
               example:
-                status: 400,
+                status: 400
                 message: Wrong '1981' argument, please only use letters
