@@ -42,7 +42,7 @@ public class NumberRestController {
     @Operation(summary = "Calculate the square roots of a positive number",
                description = "Calculate the square roots of a positive number using the Heron algorithm")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful string evaluation",
+            @ApiResponse(responseCode = "200", description = "Successful square roots calculation",
                     content = { @Content(mediaType = "application/json", schema =
                     @Schema(implementation = OkResponseDTO.class),
                             examples = { @ExampleObject(value = "{\"value\": 2, \"responseTime\":\"10\"}")})}),
@@ -62,7 +62,7 @@ public class NumberRestController {
     @Operation(summary = "Check if a number is a prime number",
             description = "Return true if the number is prime else return false")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful string evaluation",
+            @ApiResponse(responseCode = "200", description = "Successful prime number evaluation",
                     content = { @Content(mediaType = "application/json", schema =
                     @Schema(implementation = OkResponseDTO.class),
                             examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":\"10\"}")})}),
