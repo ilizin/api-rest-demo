@@ -26,8 +26,8 @@ public class NumberRestControllerTest {
 
     private static Stream<Arguments> sqrtArguments() {
         return Stream.of(
-                Arguments.of("9", "3.000", status().isOk()),
-                Arguments.of("4", "2.000", status().isOk()),
+                Arguments.of("9", "{\"value\":\"3.0\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("4", "{\"value\":\"2.0\",\"responseTime\":0}", status().isOk()),
                 Arguments.of("bad_number", null, status().isBadRequest())
         );
     }
@@ -60,8 +60,7 @@ public class NumberRestControllerTest {
         ResultActions resultActions = this.mockMvc.perform(get(SQRT_URL + value));
         resultActions.andExpect(expectedState);
         if (!value.equals("bad_number")) {
-            //TODO Improve this (convert to a number and validate)
-            resultActions.andExpect(content().string(containsString(expectedResult)));
+            resultActions.andExpect(content().string(expectedResult));
         }
     }
 }

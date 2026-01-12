@@ -13,6 +13,6 @@ public class SqrtEroneService implements ISqrtService {
             xprev = xn;
             xn = 1d/2d * (xprev + value/xprev);
         } while (Math.abs(xn - xprev) > 0.1);
-        return xn;
+        return Math.round(xn * 100.0) / 100.0;
     }
 }
