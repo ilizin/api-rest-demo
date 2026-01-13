@@ -36,7 +36,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/OkResponseDTO" # Reference to an object
               example:
                 value: 2
                 responseTime: 10
@@ -45,7 +45,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/ErrorResponseDTO" # Reference to an object
               example:
                 status: 400
                 message: The value must be positive
@@ -71,7 +71,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/OkResponseDTO" # Reference to an object
               example:
                 value: true
                 responseTime: 10
@@ -96,7 +96,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/OkResponseDTO" # Reference to an object
               example:
                 value: true
                 responseTime: 10
@@ -105,7 +105,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: "#/components/schemas/ErrorResponseDTO" # Reference to an object
               example:
                 status: 400
                 message: Wrong '1981' argument, please only use letters
