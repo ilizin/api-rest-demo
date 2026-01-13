@@ -36,7 +36,7 @@ paths:
           content:
             application/json:
               schema:
-                type: integer
+                type: object
               example:
                 value: 2
                 responseTime: 10
@@ -45,7 +45,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
+                type: object
               example:
                 status: 400
                 message: The value must be positive
@@ -71,7 +71,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
+                type: object
               example:
                 value: true
                 responseTime: 10
@@ -96,7 +96,7 @@ paths:
           content:
             application/json:
               schema:
-                type: boolean
+                type: object
               example:
                 value: true
                 responseTime: 10
@@ -105,7 +105,19 @@ paths:
           content:
             application/json:
               schema:
-                type: array
+                type: object
               example:
                 status: 400
                 message: Wrong '1981' argument, please only use letters
+components:
+  schemas:
+    OkResponseDTO:
+      type: object
+      example:
+          value: 4
+          responseTime: 50
+    ErrorResponseDTO:
+      type: object
+      example:
+        status: 400
+        message: "The value must be positive"
