@@ -68,7 +68,7 @@ public class StringRestController {
             @ApiResponse(responseCode = "200", description = "Successful string evaluation",
                     content = { @Content(mediaType = "application/json", schema =
                                 @Schema(implementation = OkResponseDTO.class),
-                                        examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":\"10\"}")})}),
+                                        examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
             @ApiResponse(responseCode = "400", description = "Incorrect input value",
                     content = { @Content(mediaType = "application/json", schema =
                                 @Schema(implementation = ErrorResponseDTO.class),

@@ -45,7 +45,7 @@ public class NumberRestController {
             @ApiResponse(responseCode = "200", description = "Successful square roots calculation",
                     content = { @Content(mediaType = "application/json", schema =
                     @Schema(implementation = OkResponseDTO.class),
-                            examples = { @ExampleObject(value = "{\"value\": 2, \"responseTime\":\"10\"}")})}),
+                            examples = { @ExampleObject(value = "{\"value\": 2, \"responseTime\":10}")})}),
             @ApiResponse(responseCode = "400", description = "Incorrect input value",
                          content = { @Content(mediaType = "application/json", schema =
                                      @Schema(implementation = ErrorResponseDTO.class)) })
@@ -65,7 +65,7 @@ public class NumberRestController {
             @ApiResponse(responseCode = "200", description = "Successful prime number evaluation",
                     content = { @Content(mediaType = "application/json", schema =
                     @Schema(implementation = OkResponseDTO.class),
-                            examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":\"10\"}")})}),
+                            examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
     })
     @GetMapping("/prime/{value}")
     public OkResponseDTO isPrime(@Parameter(description = "An integer number you want to check if it's prime", example = "11")
