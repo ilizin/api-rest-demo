@@ -113,11 +113,21 @@ components:
   schemas:
     OkResponseDTO:
       type: object
+      properties:
+        value:
+          type: integer
+        responseTime:
+          type: string
       example:
           value: 4
           responseTime: 50
     ErrorResponseDTO:
       type: object
+      properties:
+        status:
+          type: integer
+        message:
+          type: string
       example:
         status: 400
         message: "The value must be positive"
