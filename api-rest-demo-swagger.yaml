@@ -115,9 +115,9 @@ components:
       type: object
       properties:
         value:
-          type: integer
-        responseTime:
           type: string
+        responseTime:
+          type: integer
       example:
           value: 4
           responseTime: 50
