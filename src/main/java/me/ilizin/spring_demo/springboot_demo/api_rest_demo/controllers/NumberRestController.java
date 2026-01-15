@@ -6,9 +6,12 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.ErrorResponseDTO;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.GcdInDto;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.OkResponseDTO;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IGcdService;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPrimeNumberService;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +28,7 @@ public class NumberRestController {
 
     private final ISqrtService sqrtService;
     private IPrimeNumberService primeNumberService;
+    private IGcdService gcdService;
 
     public NumberRestController(ISqrtService sqrtService) {
         this.sqrtService = sqrtService;
@@ -72,6 +76,22 @@ public class NumberRestController {
                            @PathVariable int value) {
         Instant start = Instant.now();
         String response = String.valueOf(primeNumberService.isPrime(value));
+        Instant end = Instant.now();
+        return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
+    }
+
+    @Operation(summary = "Find the Greatest Common Divisor (GCD) of two integers",
+            description = "Use the Euclidean Algorithm to find the Greatest Common Divisor (GCD) of two integers")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful GCD evaluation",
+                    content = { @Content(mediaType = "application/json", schema =
+                    @Schema(implementation = OkResponseDTO.class),
+                            examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
+    })
+    @GetMapping("/gcd")
+    public OkResponseDTO gcd(@Valid @RequestBody GcdInDto gcdInDto) {
+        Instant start = Instant.now();
+        String response = String.valueOf(gcdService.gcd(gcdInDto.getValue1(), gcdInDto.getValue2()));
         Instant end = Instant.now();
         return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }
