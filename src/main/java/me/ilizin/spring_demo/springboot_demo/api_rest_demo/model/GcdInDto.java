@@ -1,8 +1,12 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class GcdInDto {
 
+    @Schema(description = "First number", example = "105")
     private int value1;
+    @Schema(description = "Second number", example = "70")
     private int value2;
 
     public int getValue1() {
