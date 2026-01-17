@@ -28,6 +28,7 @@ public class NumberRestController {
 
     private final ISqrtService sqrtService;
     private IPrimeNumberService primeNumberService;
+    @Autowired
     private IGcdService gcdService;
 
     public NumberRestController(ISqrtService sqrtService) {
@@ -89,7 +90,7 @@ public class NumberRestController {
                             examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
     })
     @GetMapping("/gcd")
-    public OkResponseDTO gcd(@Valid @RequestBody GcdInDto gcdInDto) {
+    public OkResponseDTO gcd(@Valid GcdInDto gcdInDto) {
         Instant start = Instant.now();
         String response = String.valueOf(gcdService.gcd(gcdInDto.getValue1(), gcdInDto.getValue2()));
         Instant end = Instant.now();

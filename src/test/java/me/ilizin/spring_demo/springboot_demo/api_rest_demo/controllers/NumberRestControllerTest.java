@@ -12,7 +12,6 @@ import org.springframework.test.web.servlet.ResultMatcher;
 
 import java.util.stream.Stream;
 
-import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -23,7 +22,7 @@ public class NumberRestControllerTest {
 
     private static final String PRIME_URL = "/v1/prime/";
     private static final String SQRT_URL = "/v1/sqrt/";
-    private static final String GCD_URL = "/v1/sqrt/";
+    private static final String GCD_URL = "/v1/gcd";
 
     private static Stream<Arguments> sqrtArguments() {
         return Stream.of(
@@ -35,7 +34,8 @@ public class NumberRestControllerTest {
 
     private static Stream<Arguments> gcdArguments() {
         return Stream.of(
-                Arguments.of("100", "50", "{\"value\":\"50\",\"responseTime\":0}", status().isOk())
+                Arguments.of("100", "50", "{\"value\":\"50\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("252", "105", "{\"value\":\"21\",\"responseTime\":0}", status().isOk())
         );
     }
 
@@ -74,6 +74,8 @@ public class NumberRestControllerTest {
     @ParameterizedTest
     @MethodSource("gcdArguments")
     void gcd(String value1, String value2, String expectedResult, ResultMatcher expectedState) throws Exception {
-        
+        ResultActions resultActions = this.mockMvc.perform(get(GCD_URL + "?value1="+value1+"&value2="+value2));
+        resultActions.andExpect(expectedState);
+        resultActions.andExpect(content().string(expectedResult));
     }
 }
