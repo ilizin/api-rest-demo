@@ -23,12 +23,19 @@ public class NumberRestControllerTest {
 
     private static final String PRIME_URL = "/v1/prime/";
     private static final String SQRT_URL = "/v1/sqrt/";
+    private static final String GCD_URL = "/v1/sqrt/";
 
     private static Stream<Arguments> sqrtArguments() {
         return Stream.of(
                 Arguments.of("9", "{\"value\":\"3.0\",\"responseTime\":0}", status().isOk()),
                 Arguments.of("4", "{\"value\":\"2.0\",\"responseTime\":0}", status().isOk()),
                 Arguments.of("bad_number", null, status().isBadRequest())
+        );
+    }
+
+    private static Stream<Arguments> gcdArguments() {
+        return Stream.of(
+                Arguments.of("100", "50", "{\"value\":\"50\",\"responseTime\":0}", status().isOk())
         );
     }
 
@@ -62,5 +69,11 @@ public class NumberRestControllerTest {
         if (!value.equals("bad_number")) {
             resultActions.andExpect(content().string(expectedResult));
         }
+    }
+
+    @ParameterizedTest
+    @MethodSource("gcdArguments")
+    void gcd(String value1, String value2, String expectedResult, ResultMatcher expectedState) throws Exception {
+        
     }
 }
