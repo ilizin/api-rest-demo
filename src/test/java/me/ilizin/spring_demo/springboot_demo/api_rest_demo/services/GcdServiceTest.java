@@ -13,7 +13,10 @@ public class GcdServiceTest {
     private static Stream<Arguments> gcd() {
         return Stream.of(
                 Arguments.of(100, 50, 50),
-                Arguments.of(50, 100, 50)
+                Arguments.of(50, 100, 50),
+                Arguments.of(18, 12, 6),
+                Arguments.of(-18, 12, 6),
+                Arguments.of(-18, -12, 6)
         );
     }
 
