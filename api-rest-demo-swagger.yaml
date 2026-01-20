@@ -162,9 +162,8 @@ components:
         value1:
           description: First number
           type: integer
+          example: 105
         value2:
           description: Second number
           type: integer
-      example:
-        value1: 105
-        value2: 70
+          example: 70
