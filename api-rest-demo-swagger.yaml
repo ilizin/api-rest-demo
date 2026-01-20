@@ -160,8 +160,10 @@ components:
       type: object
       properties:
         value1:
+          description: First number
           type: integer
         value2:
+          description: Second number
           type: integer
       example:
         value1: 105
