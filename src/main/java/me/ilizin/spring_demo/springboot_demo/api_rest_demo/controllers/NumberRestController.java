@@ -87,7 +87,7 @@ public class NumberRestController {
             @ApiResponse(responseCode = "200", description = "Successful GCD evaluation",
                     content = { @Content(mediaType = "application/json", schema =
                     @Schema(implementation = OkResponseDTO.class),
-                            examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
+                            examples = { @ExampleObject(value = "{\"value\": 35, \"responseTime\":10}")})}),
     })
     @GetMapping("/gcd")
     public OkResponseDTO gcd(@Valid GcdInDto gcdInDto) {

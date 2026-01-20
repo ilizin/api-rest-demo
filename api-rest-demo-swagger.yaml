@@ -75,6 +75,31 @@ paths:
               example:
                 value: true
                 responseTime: 10
+  /v1/gcd:
+    get:
+      summary: Find the Greatest Common Divisor (GCD) of two integers
+      description: Use the Euclidean Algorithm to find the Greatest Common Divisor (GCD) of two integers
+      tags:
+        - Number controller
+      parameters:
+        - in: path
+          name: value
+          required: true
+          description: An integer number you want to check if it's prime
+          example: 11
+          schema:
+            type: integer
+
+      responses:
+        "200": # status code
+          description: Successful GCD evaluation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OkResponseDTO" # Reference to an object
+              example:
+                value: 35
+                responseTime: 10
 
   /v1/palindrome/{value}:
     get:
