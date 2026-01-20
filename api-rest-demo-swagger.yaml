@@ -156,3 +156,13 @@ components:
       example:
         status: 400
         message: "The value must be positive"
+    GcdInDTO:
+      type: object
+      properties:
+        value1:
+          type: integer
+        value2:
+          type: integer
+      example:
+        value1: 105
+        value2: 70
