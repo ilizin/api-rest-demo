@@ -88,7 +88,7 @@ paths:
           description: An integer number you want to check if it's prime
           example: 11
           schema:
-            type: integer
+            $ref: "#/components/schemas/GcdInDTO" # Reference to an object
         - in: query
           name: value2
           required: true
