@@ -85,7 +85,6 @@ paths:
         - in: query
           name: gcdInDto
           required: true
-          description: An integer number you want to check if it's prime
           example:
             value1: 105
             value2: 70
