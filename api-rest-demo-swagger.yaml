@@ -85,9 +85,9 @@ paths:
         - in: query
           name: gcdInDto
           required: true
-          example:
-            value1: 105
-            value2: 70
+          #example:
+           # value1: 105
+            #value2: 70
           schema:
             $ref: "#/components/schemas/GcdInDTO" # Reference to an object
       responses:
