@@ -83,7 +83,7 @@ paths:
         - Number controller
       parameters:
         - in: query
-          name: value1
+          name: gcdInDto
           required: true
           description: An integer number you want to check if it's prime
           example:
