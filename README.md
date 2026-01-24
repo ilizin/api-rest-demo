@@ -3,7 +3,7 @@
 This demo project shows how easy is to build an api rest with springboot.
 
 Spring boot is full of properties and annotations, and you will find this code fully commented on how to use a bunch of them, 
-they're summarized in the following two tables. 
+the ones you'll find are summarized in the following two tables. 
 
 <table border="0">
 <tr><td>
@@ -60,7 +60,7 @@ This demo project goal is just didactic, so I encourage you to read the code, th
 This simple demo API project is fully described with an OpenAPI document, you can visualize it through the following swagger page https://ilizin.github.io/api-rest-demo/
 
 Thanks to @peter-evans to document how to host a swagger API documentation on GitHub Pages, more details at
-*References* section.
+[References](#References) section.
 
 ## 💾 Installation
 
@@ -74,7 +74,7 @@ ilizin@ilizin:~$
 ```
 
 2. Make sure you've installed the apache maven, or refer to the official page [Install Maven](https://maven.apache.org/install.html)
-to install it.
+to install it. Find the right JDK compatibility at the [Maven Releases History](https://maven.apache.org/docs/history.html) page.
 ```
 ilizin@ilizin /c
 $ mvn -v
@@ -91,7 +91,9 @@ ilizin@ilizin /c
 git clone git@github.com:ilizin/api-rest-demo.git
 ```
 
-4. Run the <i>mvn clean install</i> command to run the tests and install the project:
+4. Move to the *api-rest-demo*
+
+5. Run the <i>mvn clean install</i> command to run the tests and install the project:
 ```
 ilizin@ilizin:~/repos/api-rest-demo (main)
 $ mvn clean install
