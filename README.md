@@ -5,8 +5,8 @@ This demo project shows how easy is to build an api rest with springboot.
 Spring boot is full of properties and annotations, and you will find this code fully commented on how to use a bunch of them, 
 the ones you'll find are summarized in the following two tables. 
 
-<table border="0">
-<tr><td>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
+<div style="flex: 1; max-width: 45%;">
 
 | Annotations            |  
 |------------------------|
@@ -30,7 +30,8 @@ the ones you'll find are summarized in the following two tables.
 | @SpringBootTest        | 
 | @AutoConfigureMockMvc  | 
 
-</td><td>
+</div>
+<div style="flex: 1; max-width: 45%; text-align: left; margin-left: 20px;">
 
 | Properties                                |  
 |-------------------------------------------|
@@ -51,7 +52,8 @@ the ones you'll find are summarized in the following two tables.
 | springdoc.api-docs.enabled                | 
 | springdoc.swagger-ui.enabled              |
 
-</td></tr> </table>
+</div>
+</div>
 
 This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
@@ -91,7 +93,7 @@ ilizin@ilizin /c
 git clone git@github.com:ilizin/api-rest-demo.git
 ```
 
-4. Move to the *api-rest-demo*
+4. Move to the *api-rest-demo* folder.
 
 5. Run the <i>mvn clean install</i> command to run the tests and install the project:
 ```
@@ -141,8 +143,25 @@ ilizin@ilizin:~/repos/api-rest-demo$ mvn spring-boot:run
 
 ## 📂 Structure
 
-It's a maven based project, therefore the structure is standard, more details about the maven project director layout  [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+This is a maven based project, therefore the structure is standard, more details about the maven project director layout  [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 
+```
+/
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── me.ilizin.spring_demo.springboot_demo.api_rest_demo
+    │   │       ├── 
+    │           └── ...
+    │
+    │   
+    │   
+    └── test
+        └── java
+            └── me.ilizin.spring_demo.springboot_demo.api_rest_demo
+                ├── 
+                └── ...
+```
 ## 📬 Contact
 
 GitHub: [ilizin](https://github.com/ilizin)
