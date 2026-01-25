@@ -5,55 +5,27 @@ This demo project shows how easy is to build an api rest with springboot.
 Spring boot is full of properties and annotations, and you will find this code fully commented on how to use a bunch of them, 
 the ones you'll find are summarized in the following two tables. 
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
-<div style="flex: 1; max-width: 45%;">
-
-| Annotations            |  
-|------------------------|
-| @Configuration         | 
-| @ControllerAdvice      |    
-| @ExceptionHandler      | 
-| @RestController        |
-| @RequestMapping        | 
-| @Value                 | 
-| @Autowired             | 
-| @Qualifier             |
-| @GetMapping            | 
-| @PathVariable          | 
-| @Lazy                  |
-| @Service               |
-| @PostConstruct         | 
-| @PreDestroy            | 
-| @Primary               | 
-| @Scope                 |
-| @SpringBootApplication | 
-| @SpringBootTest        | 
-| @AutoConfigureMockMvc  | 
-
-</div>
-<div style="flex: 1; max-width: 45%; text-align: left; margin-left: 20px;">
-
-| Properties                                |  
-|-------------------------------------------|
-| management.endpoints.web.exposure.include | 
-| management.info.env.enabled               |    
-| management.endpoints.web.exposure.exclude | 
-| spring.security.user.name                 |
-| spring.security.user.password             | 
-| server.port                               | 
-| server.servlet.context-path               | 
-| server.servlet.session.timeout            |
-| logging.level                             | 
-| logging.file.name                         | 
-| spring.main.lazy-initialization           |
-| spring.application.name                   |
-| spring.main.banner-mode                   | 
-| spring.banner.location                    | 
-| springdoc.api-docs.enabled                | 
-| springdoc.swagger-ui.enabled              |
-
-</div>
-</div>
+| Annotations            | Properties                                |  
+|------------------------|-------------------------------------------|
+| @Configuration         | management.endpoints.web.exposure.include | 
+| @ControllerAdvice      | management.info.env.enabled               |    
+| @ExceptionHandler      | management.endpoints.web.exposure.exclude | 
+| @RestController        | spring.security.user.name                 |
+| @RequestMapping        | spring.security.user.password             | 
+| @Value                 | server.port                               |
+| @Autowired             | server.servlet.context-path               | 
+| @Qualifier             | server.servlet.session.timeout            |
+| @GetMapping            | logging.level                             | 
+| @PathVariable          | logging.file.name                         | 
+| @Lazy                  | spring.main.lazy-initialization           |
+| @Service               | spring.application.name                   |
+| @PostConstruct         | spring.main.banner-mode                   | 
+| @PreDestroy            | spring.banner.location                    | 
+| @Primary               | springdoc.api-docs.enabled                |
+| @Scope                 | springdoc.swagger-ui.enabled              |
+| @SpringBootApplication |                                           |
+| @SpringBootTest        |                                           |
+| @AutoConfigureMockMvc  |                                           |
 
 This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
