@@ -115,8 +115,9 @@ ilizin@ilizin:~/repos/api-rest-demo$ mvn spring-boot:run
 
 ## 📂 Structure
 
-This is a maven based project, so it follows a standard structure, more details about the maven project director layout [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
-Beside that, I usually follow the folders structure for an API rest
+This is a maven based project, so it follows a standard structure, more details about the maven project director layout [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
+
+Besides that, I follow this folders structure for an API rest development.
 
 ```
 /
@@ -131,6 +132,7 @@ Beside that, I usually follow the folders structure for an API rest
     │   │       ├── model
     │   │       ├── services
     │   │       └── ApiRestDemoApplication.java
+    │   │
     │   └── resources
     │       ├── application.properties
     │       └── banner.txt      

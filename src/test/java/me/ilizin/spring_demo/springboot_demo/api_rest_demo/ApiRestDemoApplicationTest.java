@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /* The @SpringBootTest annotation tells Spring Boot to look for a main configuration class (one with @SpringBootApplication,
  for instance) and use that to start a Spring application context. */
 @SpringBootTest
-class ApiRestDemoApplicationTests {
+class ApiRestDemoApplicationTest {
 
 	@Autowired
 	private NumberRestController numberRestController;
