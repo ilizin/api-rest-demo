@@ -31,7 +31,7 @@ This demo project goal is just didactic, so I encourage you to read the code, th
 
 ## 📘 Description
 
-This API has two controllers with a bunch of operations on them, it's fully described with an OpenAPI document hosted on GitHub, so you can visualize it at the following swagger page https://ilizin.github.io/api-rest-demo/
+This API has two controllers with a bunch of operations on them, and it's fully described with an OpenAPI document hosted on GitHub, please visualize it at the following swagger page https://ilizin.github.io/api-rest-demo/
 
 Thanks to [Peter Evans](https://github.com/peter-evans/) to document how to host a swagger API documentation on GitHub Pages, more details at
 [References](#References) section.
@@ -115,7 +115,8 @@ ilizin@ilizin:~/repos/api-rest-demo$ mvn spring-boot:run
 
 ## 📂 Structure
 
-This is a maven based project, therefore the structure is standard, more details about the maven project director layout  [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+This is a maven based project, so it follows a standard structure, more details about the maven project director layout [here](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+Beside that, I usually follow the folders structure for an API rest
 
 ```
 /
@@ -123,16 +124,23 @@ This is a maven based project, therefore the structure is standard, more details
     ├── main
     │   ├── java
     │   │   └── me.ilizin.spring_demo.springboot_demo.api_rest_demo
-    │   │       ├── 
-    │           └── ...
-    │
-    │   
-    │   
+    │   │       ├── config
+    │   │       ├── controllers
+    │   │       ├── enums
+    │   │       ├── filters
+    │   │       ├── model
+    │   │       ├── services
+    │   │       └── ApiRestDemoApplication.java
+    │   └── resources
+    │       ├── application.properties
+    │       └── banner.txt      
+    │ 
     └── test
         └── java
             └── me.ilizin.spring_demo.springboot_demo.api_rest_demo
-                ├── 
-                └── ...
+                ├── controllers
+                ├── services
+                └── ApiRestDemoApplicationTest.java
 ```
 ## 📬 Contact
 
