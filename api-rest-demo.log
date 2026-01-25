@@ -1,0 +1,54 @@
+2026-01-25T11:16:39.765+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.ApiRestDemoApplicationTest     : Starting ApiRestDemoApplicationTest using Java 17.0.2 with PID 6488 (started by ilio.zincone in C:\ilio\repos\api-rest-demo)
+2026-01-25T11:16:39.781+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.ApiRestDemoApplicationTest     : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-25T11:16:39.781+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.ApiRestDemoApplicationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-01-25T11:16:41.448+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeRecursiveService   : We're instantiating the palindrome recursive service. 
+2026-01-25T11:16:41.448+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeRecursiveService   : Doing some startup stuff
+2026-01-25T11:16:42.753+01:00  INFO 6488 --- [api-rest-demo] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-25T11:16:42.833+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.ApiRestDemoApplicationTest     : Started ApiRestDemoApplicationTest in 3.421 seconds (process running for 5.447)
+2026-01-25T11:16:43.857+01:00  INFO 6488 --- [api-rest-demo] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.NumberRestControllerTest]: NumberRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-25T11:16:43.906+01:00  INFO 6488 --- [api-rest-demo] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration me.ilizin.spring_demo.springboot_demo.api_rest_demo.ApiRestDemoApplication for test class me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.NumberRestControllerTest
+2026-01-25T11:16:43.994+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.NumberRestControllerTest     : Starting NumberRestControllerTest using Java 17.0.2 with PID 6488 (started by ilio.zincone in C:\ilio\repos\api-rest-demo)
+2026-01-25T11:16:43.994+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.NumberRestControllerTest     : Running with Spring Boot v3.4.1, Spring v6.2.1
+2026-01-25T11:16:43.994+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.NumberRestControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-01-25T11:16:44.495+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeRecursiveService   : We're instantiating the palindrome recursive service. 
+2026-01-25T11:16:44.495+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeRecursiveService   : Doing some startup stuff
+2026-01-25T11:16:44.773+01:00  INFO 6488 --- [api-rest-demo] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-01-25T11:16:44.773+01:00  INFO 6488 --- [api-rest-demo] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-01-25T11:16:44.773+01:00  INFO 6488 --- [api-rest-demo] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-01-25T11:16:44.773+01:00  INFO 6488 --- [api-rest-demo] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-01-25T11:16:44.816+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.NumberRestControllerTest     : Started NumberRestControllerTest in 0.845 seconds (process running for 7.42)
+2026-01-25T11:16:44.884+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/gcd
+2026-01-25T11:16:45.092+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.108+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/gcd
+2026-01-25T11:16:45.121+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.131+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/sqrt/9
+2026-01-25T11:16:45.184+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.196+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/sqrt/4
+2026-01-25T11:16:45.199+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.221+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/sqrt/bad_number
+2026-01-25T11:16:45.232+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.248+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/prime/9
+2026-01-25T11:16:45.248+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.263+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/prime/4
+2026-01-25T11:16:45.263+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.272+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/prime/11
+2026-01-25T11:16:45.277+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.279+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/prime/bad_number
+2026-01-25T11:16:45.286+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.300+01:00  INFO 6488 --- [api-rest-demo] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.StringRestControllerTest]: StringRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-25T11:16:45.308+01:00  INFO 6488 --- [api-rest-demo] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration me.ilizin.spring_demo.springboot_demo.api_rest_demo.ApiRestDemoApplication for test class me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers.StringRestControllerTest
+2026-01-25T11:16:45.326+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/palindrome/rotavator
+2026-01-25T11:16:45.330+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : The not.useful.property value is 'This means nothing'
+2026-01-25T11:16:45.330+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.348+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/palindrome/DylanDog
+2026-01-25T11:16:45.350+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : The not.useful.property value is 'This means nothing'
+2026-01-25T11:16:45.350+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.361+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Request  GET : /v1/palindrome/1000
+2026-01-25T11:16:45.363+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : The not.useful.property value is 'This means nothing'
+2026-01-25T11:16:45.363+01:00  INFO 6488 --- [api-rest-demo] [main] m.i.s.s.a.c.StringRestController         : Logging Response :application/json
+2026-01-25T11:16:45.396+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeIterativeService   : We're instantiating the palindrome iterative service. 
+2026-01-25T11:16:45.396+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeIterativeService   : We're instantiating the palindrome iterative service. 
+2026-01-25T11:16:45.407+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeRecursiveService   : We're instantiating the palindrome recursive service. 
+2026-01-25T11:16:45.411+01:00 DEBUG 6488 --- [api-rest-demo] [main] m.i.s.s.a.s.PalindromeRecursiveService   : We're instantiating the palindrome recursive service. 
+2026-01-25T11:16:45.642+01:00 DEBUG 6488 --- [api-rest-demo] [SpringApplicationShutdownHook] m.i.s.s.a.s.PalindromeRecursiveService   : Doing some cleanup stuff
+2026-01-25T11:16:45.642+01:00 DEBUG 6488 --- [api-rest-demo] [SpringApplicationShutdownHook] m.i.s.s.a.s.PalindromeRecursiveService   : Doing some cleanup stuff

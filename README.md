@@ -5,27 +5,27 @@ This demo project shows how easy is to build an api rest with springboot.
 Spring boot is full of properties and annotations, and you will find this code fully commented on how to use a bunch of them, 
 the ones you'll find are summarized in the following two tables. 
 
-| $${\color{green}Annotations}$$      | $${\color{green}Properties}$$              |  
-|------------------------|--------------------------------------------|
-| @Configuration         | management.endpoints.web.exposure.include  | 
-| @ControllerAdvice      | management.info.env.enabled                |    
-| @ExceptionHandler      | management.endpoints.web.exposure.exclude  | 
-| @RestController        | spring.security.user.name                  |
-| @RequestMapping        | spring.security.user.password              | 
-| @Value                 | server.port                                |
-| @Autowired             | server.servlet.context-path                | 
-| @Qualifier             | server.servlet.session.timeout             |
-| @GetMapping            | logging.level                              | 
-| @PathVariable          | logging.file.name                          | 
-| @Lazy                  | spring.main.lazy-initialization            |
-| @Service               | spring.application.name                    |
-| @PostConstruct         | spring.main.banner-mode                    | 
-| @PreDestroy            | spring.banner.location                     | 
-| @Primary               | springdoc.api-docs.enabled                 |
-| @Scope                 | springdoc.swagger-ui.enabled               |
-| @SpringBootApplication |                                            |
-| @SpringBootTest        |                                            |
-| @AutoConfigureMockMvc  |                                            |
+| Annotations            | Properties                                |  
+|------------------------|-------------------------------------------|
+| @Configuration         | management.endpoints.web.exposure.include | 
+| @ControllerAdvice      | management.info.env.enabled               |    
+| @ExceptionHandler      | management.endpoints.web.exposure.exclude | 
+| @RestController        | spring.security.user.name                 |
+| @RequestMapping        | spring.security.user.password             | 
+| @Value                 | server.port                               |
+| @Autowired             | server.servlet.context-path               | 
+| @Qualifier             | server.servlet.session.timeout            |
+| @GetMapping            | logging.level                             | 
+| @PathVariable          | logging.file.name                         | 
+| @Lazy                  | spring.main.lazy-initialization           |
+| @Service               | spring.application.name                   |
+| @PostConstruct         | spring.main.banner-mode                   | 
+| @PreDestroy            | spring.banner.location                    | 
+| @Primary               | springdoc.api-docs.enabled                |
+| @Scope                 | springdoc.swagger-ui.enabled              |
+| @SpringBootApplication |                                           |
+| @SpringBootTest        |                                           |
+| @AutoConfigureMockMvc  |                                           |
 
 This demo project goal is just didactic, so I encourage you to read the code, the comments, and learn from them.
 
@@ -35,6 +35,10 @@ This API has two controllers with a bunch of operations on them, and it's fully 
 
 Thanks to [Peter Evans](https://github.com/peter-evans/) to document how to host a swagger API documentation on GitHub Pages, more details at
 [References](#References) section.
+
+### Number controller
+
+### String controller
 
 ## 💾 Installation
 
@@ -147,6 +151,10 @@ Besides that, I follow this folders structure for an API rest development.
 ## 📬 Contact
 
 GitHub: [ilizin](https://github.com/ilizin)
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## 🔗 References
 
