@@ -1,6 +1,6 @@
 # api-rest-demo
 
-This demo project shows how easy is to build an api rest with springboot.
+This demo project shows how easy is to build an api rest with spring boot.
 
 Spring boot is full of properties and annotations, and you will find this code fully commented on how to use a bunch of them, 
 the ones you'll find are summarized in the following two tables. 
@@ -31,12 +31,15 @@ This demo project goal is just didactic, so I encourage you to read the code, th
 
 ## 📘 Description
 
-This API has two controllers with a bunch of operations on them, and it's fully described with an OpenAPI document hosted on GitHub, please visualize it at the following swagger page https://ilizin.github.io/api-rest-demo/
+This API provides two controllers with a bunch of operations, and it's fully described with an OpenAPI document hosted on GitHub, please visualize it at the following swagger page https://ilizin.github.io/api-rest-demo/
 
 Thanks to [Peter Evans](https://github.com/peter-evans/) to document how to host a swagger API documentation on GitHub Pages, more details at
 [References](#References) section.
 
 ### Number controller
+
+This controller provides operations on numbers that are well-known in the field of calculus, you will find algorithms like the Heron algorithm
+for the square roots calculus, the Euclidean algorithm for the GCD calculus, etc.
 
 ### String controller
 
