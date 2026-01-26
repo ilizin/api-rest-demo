@@ -11,6 +11,7 @@ import jakarta.validation.constraints.Positive;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.ErrorResponseDTO;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.GcdInDto;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.OkResponseDTO;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.PrimeInDto;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IGcdService;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPrimeNumberService;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
@@ -72,11 +73,10 @@ public class NumberRestController {
                     @Schema(implementation = OkResponseDTO.class),
                             examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
     })
-    @GetMapping("/prime/{value}")
-    public OkResponseDTO isPrime(@Parameter(description = "An integer number you want to check if it's prime", example = "11")
-                           @PathVariable int value) {
+    @GetMapping("/prime")
+    public OkResponseDTO isPrime(@Valid PrimeInDto primeInDto) {
         Instant start = Instant.now();
-        String response = String.valueOf(primeNumberService.isPrime(value));
+        String response = String.valueOf(primeNumberService.isPrime(primeInDto.getValue()));
         Instant end = Instant.now();
         return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }
