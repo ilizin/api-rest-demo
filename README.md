@@ -36,12 +36,16 @@ This API provides two controllers with a bunch of operations, and it's fully des
 Thanks to [Peter Evans](https://github.com/peter-evans/) to document how to host a swagger API documentation on GitHub Pages, more details at
 [References](#References) section.
 
+Beside all the spring boot stuff you can learn from here, a variety of well-known algorithms are encapsulated in a controller operation. 
+
 ### Number controller
 
 This controller provides operations on numbers that are well-known in the field of calculus, you will find algorithms like the Heron algorithm
 for the square roots calculus, the Euclidean algorithm for the GCD calculus, etc.
 
 ### String controller
+
+Palindrome check, or popular string search algorithms are provided as part of the *StringController* operations.
 
 ## 💾 Installation
 

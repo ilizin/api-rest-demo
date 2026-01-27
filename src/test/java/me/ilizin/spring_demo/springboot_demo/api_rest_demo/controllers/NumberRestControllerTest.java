@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class NumberRestControllerTest {
 
-    private static final String PRIME_URL = "/v1/prime/";
+    private static final String PRIME_URL = "/v1/prime";
     private static final String SQRT_URL = "/v1/sqrt/";
     private static final String GCD_URL = "/v1/gcd";
 
@@ -54,7 +54,7 @@ public class NumberRestControllerTest {
     @ParameterizedTest
     @MethodSource("primeArguments")
     void prime(String value, String expectedResult, ResultMatcher expectedState) throws Exception {
-        ResultActions resultActions = this.mockMvc.perform(get(PRIME_URL + value));
+        ResultActions resultActions = this.mockMvc.perform(get(PRIME_URL + "?value="+value+"&primeMethod=NAIVE_METHOD"));
         resultActions.andExpect(expectedState);
         if (!value.equals("bad_number")) {
             resultActions.andExpect(content().string(expectedResult));
