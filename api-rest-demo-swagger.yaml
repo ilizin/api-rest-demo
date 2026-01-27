@@ -58,7 +58,7 @@ paths:
         - Number controller
       parameters:
         - in: query
-          name: gcdInDto
+          name: primeInDto
           required: true
           schema:
             $ref: "#/components/schemas/PrimeInDTO" # Reference to an object
@@ -172,5 +172,6 @@ components:
           example: 17
         method:
           description: The method used to check if a number is prime
-          type: PrimeMethod
+          type: string
+          enum: [NAIVE_METHOD, SIEVE_OF_ERATOSTHENES_METHOD, SIEVE_OF_SUNDARAM_METHOD, SIEVE_OF_ATKIN_METHOD]
           example: NAIVE_METHOD
