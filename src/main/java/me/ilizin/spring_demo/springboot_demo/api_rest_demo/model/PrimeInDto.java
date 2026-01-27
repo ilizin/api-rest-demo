@@ -7,7 +7,7 @@ public class PrimeInDto {
     @Schema(description = "The integer value we want to validate if it's prime", example = "17")
     private int value;
     @Schema(description = "The method used to check if a number is prime", example = "NAIVE_METHOD")
-    private PrimeMethod primeMethod;
+    private PrimeMethod method;
 
     public int getValue() {
         return value;
@@ -17,11 +17,11 @@ public class PrimeInDto {
         this.value = value;
     }
 
-    public PrimeMethod getPrimeMethod() {
-        return primeMethod;
+    public PrimeMethod getMethod() {
+        return method;
     }
 
-    public void setPrimeMethod(PrimeMethod primeMethod) {
-        this.primeMethod = primeMethod;
+    public void setMethod(PrimeMethod method) {
+        this.method = method;
     }
 }

@@ -50,21 +50,18 @@ paths:
                 status: 400
                 message: The value must be positive
 
-  /v1/prime/{value}:
+  /v1/prime:
     get:
       summary: Check if a number is a prime number
       description: Return true if the number is prime else return false
       tags:
         - Number controller
       parameters:
-        - in: path
-          name: value
+        - in: query
+          name: gcdInDto
           required: true
-          description: An integer number you want to check if it's prime
-          example: 11
           schema:
-            type: integer
-
+            $ref: "#/components/schemas/PrimeInDTO" # Reference to an object
       responses:
         "200": # status code
           description: Successful prime number evaluation
@@ -85,9 +82,6 @@ paths:
         - in: query
           name: gcdInDto
           required: true
-          #example:
-           # value1: 105
-            #value2: 70
           schema:
             $ref: "#/components/schemas/GcdInDTO" # Reference to an object
       responses:
@@ -169,3 +163,14 @@ components:
           description: Second number
           type: integer
           example: 70
+    PrimeInDTO:
+      type: object
+      properties:
+        value:
+          description: The integer value we want to validate if it's prime
+          type: integer
+          example: 17
+        method:
+          description: The method used to check if a number is prime
+          type: PrimeMethod
+          example: NAIVE_METHOD
