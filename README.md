@@ -33,8 +33,8 @@ This demo project goal is just didactic, so I encourage you to read the code, th
 
 This API provides two controllers with a bunch of operations, and it's fully described with an OpenAPI document hosted on GitHub, please visualize it at the following swagger page https://ilizin.github.io/api-rest-demo/
 
-(*Thanks to [Peter Evans](https://github.com/peter-evans/) to document how to host a swagger API documentation on GitHub Pages, more details at
-[References](#References) section.*)
+*(Thanks to [Peter Evans](https://github.com/peter-evans/) to document how to host a swagger API documentation on GitHub Pages, more details at
+[References](#References) section.)*
 
 Beside all the spring boot stuff that you can learn from here, a variety of well-known algorithms ons strings and numbers are encapsulated in each operation. 
 
