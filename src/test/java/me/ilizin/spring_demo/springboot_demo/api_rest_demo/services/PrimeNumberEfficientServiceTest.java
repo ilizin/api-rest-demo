@@ -1,5 +1,6 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.enums.PrimeMethod;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -33,7 +34,7 @@ public class PrimeNumberEfficientServiceTest {
     @ParameterizedTest
     @MethodSource("isPrime")
     public void isPrime(int value, boolean expectedResult) {
-        assertThat(primeNumberEfficientService.isPrime(value))
+        assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.NAIVE_METHOD))
                 .isEqualTo(expectedResult);
     }
 }

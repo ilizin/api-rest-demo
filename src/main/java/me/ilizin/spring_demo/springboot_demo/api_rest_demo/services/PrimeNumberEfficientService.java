@@ -1,38 +1,34 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.enums.PrimeMethod;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PrimeNumberEfficientService implements IPrimeNumberService {
+public class PrimeNumberEfficientService extends PrimeNumberBasicService {
+
     @Override
-    public boolean isPrime(int value) {
-        if (value <= 1) {
-            return false;
+    public boolean isPrime(int value, PrimeMethod primeMethod) {
+
+        if (PrimeMethod.NAIVE_METHOD == primeMethod) {
+            return super.isPrime(value, primeMethod);
         }
-        Boolean[] primes = new Boolean[value];
-        primes[0] = false;
-        int i = 1;
-        primes[1] = true;
-        while (i < value) {
-            if (primes[i] == null) {
-                primes[i] = true;
-            }
-            int j = 2;
-            boolean end = false;
-            while (!end) {
-                int k = (i + 1) * j;
-                if (k == value) {
-                    return false;
-                } else
-                if (k < value) {
-                    primes[k - 1] = false;
-                    j++;
-                } else {
-                    end = true;
-                }
-            }
-            i++;
+
+        if (PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD == primeMethod) {
+            return isPrimeWithSieveOfEratosthenes(value);
         }
-        return primes[value - 1];
+
+        if (PrimeMethod.SIEVE_OF_SUNDARAM_METHOD == primeMethod) {
+            return isPrimeWithSieveOfEratosthenes(value);
+        }
+
+        if (PrimeMethod.SIEVE_OF_ATKIN_METHOD == primeMethod) {
+            return isPrimeWithSieveOfEratosthenes(value);
+        }
+
+        throw new IllegalArgumentException();
+    }
+
+    private boolean isPrimeWithSieveOfEratosthenes(int value) {
+        return false;
     }
 }

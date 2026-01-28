@@ -76,7 +76,7 @@ public class NumberRestController {
     @GetMapping("/prime")
     public OkResponseDTO isPrime(@Valid PrimeInDto primeInDto) {
         Instant start = Instant.now();
-        String response = String.valueOf(primeNumberService.isPrime(primeInDto.getValue()));
+        String response = String.valueOf(primeNumberService.isPrime(primeInDto.getValue(), primeInDto.getMethod()));
         Instant end = Instant.now();
         return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }
