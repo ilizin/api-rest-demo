@@ -29,6 +29,20 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
     }
 
     private boolean isPrimeWithSieveOfEratosthenes(int value) {
-        return false;
+        if (value <= 1) {
+            return false;
+        }
+        int[] a = new int[value];
+        a[1] = 0; // two is a primer number
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] == 0) { // i + 1 is a prime number
+                int j = 2;
+                while((i + 1) * j <= value) {
+                    a[((i + 1) * j) - 1] = 1;
+                    j++;
+                }
+            }
+        }
+        return a[value -1] == 0;
     }
 }

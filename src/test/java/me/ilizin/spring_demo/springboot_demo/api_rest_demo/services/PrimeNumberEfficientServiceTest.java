@@ -36,5 +36,7 @@ public class PrimeNumberEfficientServiceTest {
     public void isPrime(int value, boolean expectedResult) {
         assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.NAIVE_METHOD))
                 .isEqualTo(expectedResult);
+        assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD))
+                .isEqualTo(expectedResult);
     }
 }
