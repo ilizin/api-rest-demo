@@ -32,17 +32,17 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         if (value <= 1) {
             return false;
         }
-        int[] a = new int[value];
-        a[1] = 0; // two is a primer number
-        for (int i = 1; i < a.length; i++) {
-            if (a[i] == 0) { // i + 1 is a prime number
+        int[] oneToValueInterval = new int[value];
+        for (int i = 1; i < oneToValueInterval.length; i++) {
+            if (oneToValueInterval[i] == 0) { // i + 1 is a prime number
                 int j = 2;
+                //Mark with one all the (i + 1) composite numbers
                 while((i + 1) * j <= value) {
-                    a[((i + 1) * j) - 1] = 1;
+                    oneToValueInterval[((i + 1) * j) - 1] = 1;
                     j++;
                 }
             }
         }
-        return a[value -1] == 0;
+        return oneToValueInterval[value -1] == 0;
     }
 }
