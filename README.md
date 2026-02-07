@@ -138,6 +138,7 @@ Besides that, I follow this folders structure for an API rest development.
     │   │   └── me.ilizin.spring_demo.springboot_demo.api_rest_demo
     │   │       ├── config
     │   │       ├── controllers
+    │   │       ├── data
     │   │       ├── enums
     │   │       ├── filters
     │   │       ├── model
