@@ -16,7 +16,7 @@ externalDocs:
   url: 'https://swagger.io/'
 
 paths:
-  /v1/sqrt/{value}:
+  /api/v1/sqrt/{value}:
     get:
       summary: Calculate the square roots of a positive number
       description: Calculate the square roots of a positive number using the Heron algorithm
@@ -50,7 +50,7 @@ paths:
                 status: 400
                 message: The value must be positive
 
-  /v1/prime:
+  /api/v1/prime:
     get:
       summary: Check if a number is a prime number
       description: Return true if the number is prime else return false
@@ -72,7 +72,7 @@ paths:
               example:
                 value: true
                 responseTime: 10
-  /v1/gcd:
+  /api/v1/gcd:
     get:
       summary: Find the Greatest Common Divisor (GCD) of two integers
       description: Use the Euclidean Algorithm to find the Greatest Common Divisor (GCD) of two integers
@@ -95,7 +95,7 @@ paths:
                 value: 35
                 responseTime: 10
 
-  /v1/palindrome/{value}:
+  /api/v1/palindrome/{value}:
     get:
       summary: Check if a string is palindrome or not
       description: Return true if the string is palindrome, else false
