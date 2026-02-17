@@ -51,6 +51,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- For Parsing Swagger yaml file into object-->
+		<dependency>
+			<groupId>io.swagger.parser.v3</groupId>
+			<artifactId>swagger-parser</artifactId>
+			<version>2.1.22</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -1,13 +1,6 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
-import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.ExampleObject;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.NotBlank;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.ErrorResponseDTO;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.OkResponseDTO;
@@ -29,7 +22,6 @@ import java.time.Instant;
 /* You can use the @RequestMapping annotation to map requests to controllers methods. It has various attributes to match by URL,
    HTTP method, request parameters, headers, and media types. You can use it at the class level to express shared mappings or at the method level
    to narrow down to a specific endpoint mapping */
-@Tag(name = "String controller")
 @RequestMapping("/v1")
 public class StringRestController {
     private static final Logger logger = LoggerFactory.getLogger(StringRestController.class);
@@ -62,19 +54,6 @@ public class StringRestController {
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
-    @Operation(summary = "Check if a string is palindrome or not",
-               description = "Return true if the string is palindrome, else false")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful string evaluation",
-                    content = { @Content(mediaType = "application/json", schema =
-                                @Schema(implementation = OkResponseDTO.class),
-                                        examples = { @ExampleObject(value = "{\"value\": true, \"responseTime\":10}")})}),
-            @ApiResponse(responseCode = "400", description = "Incorrect input value",
-                    content = { @Content(mediaType = "application/json", schema =
-                                @Schema(implementation = ErrorResponseDTO.class),
-                                        examples = { @ExampleObject(value = "{\"status\": 400, \"message\":\"Wrong '1981' argument, please only use letters\"}")})
-             })
-    })
     // GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
     @GetMapping("/palindrome/{value}")
     // Spring boot uses jackson for (Json, Java pojo) mapping
