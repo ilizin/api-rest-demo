@@ -1,10 +1,6 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.config;
 
-import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
-import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.SwaggerParseResult;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.SqrtEroneService;
