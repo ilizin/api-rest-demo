@@ -1,12 +1,14 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.config;
 
+import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.SwaggerParseResult;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.SqrtEroneService;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.info.BuildProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -27,23 +29,21 @@ public class ApiRestDemoConfig {
         return new SqrtEroneService();
     }
 
-    @Autowired
-    private BuildProperties buildProperties;
-
     @Bean
-    public OpenAPI customOpenAPI() throws IOException {
-        ClassPathResource resource = new ClassPathResource("api-rest-with-jpa-demo-swagger.yaml");
-        Path path = Paths.get(resource.getURI());
-        String content = new String(Files.readAllBytes(path));
-        SwaggerParseResult result = new OpenAPIV3Parser().readContents(content);
-        if (result.getMessages().isEmpty() && result.getOpenAPI() != null) {
-            OpenAPI openAPI = result.getOpenAPI();
-            openAPI.getInfo().setTitle(buildProperties.getName());
-            openAPI.getInfo().setVersion(buildProperties.getVersion());
-            //openAPI.getInfo().setDescription(buildProperties.get("description"));
-            return openAPI;
-        } else {
-            throw new RuntimeException("Failed to parse OpenAPI definition: " + result.getMessages());
-        }
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI().info(new Info()
+                        .version("1.0.0-SNAPSHOT")
+                        .title("Api rest with JPA demo")
+                        .description("A CRUD API rest with Jpa/hibernate (h2) demo project")
+                        .contact(new Contact()
+                                .name("Contact the developer")
+                                .url("https://github.com/ilizin"))
+                        .termsOfService("http://swagger.io/terms/")
+                        .license(new License()
+                                .name("Apache 2.0")
+                                .url("http://www.apache.org/licenses/LICENSE-2.0.html")))
+                .externalDocs(new ExternalDocumentation()
+                        .description("Find out more about Swagger")
+                        .url("https://swagger.io/"));
     }
 }
