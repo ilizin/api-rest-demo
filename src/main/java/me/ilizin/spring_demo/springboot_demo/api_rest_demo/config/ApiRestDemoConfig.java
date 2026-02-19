@@ -5,18 +5,10 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
-import io.swagger.v3.parser.OpenAPIV3Parser;
-import io.swagger.v3.parser.core.models.SwaggerParseResult;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.SqrtEroneService;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.ISqrtService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 /* It's a class level annotation indicating that an object is a source of bean definitions, so a class marked with @Configuration
    declares beans through @Bean annotated methods and can also be used to define inter-bean dependencies. */
