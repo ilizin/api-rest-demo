@@ -1,6 +1,5 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
-import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.validation.constraints.NotBlank;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.ErrorResponseDTO;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.OkResponseDTO;
@@ -58,8 +57,7 @@ public class StringRestController {
     @GetMapping("/palindrome/{value}")
     // Spring boot uses jackson for (Json, Java pojo) mapping
     // The PathVariable annotation indicates that a method parameter should be bound to a URI template variable.
-    public OkResponseDTO isPalindrome(@Parameter(description = "A word to be checked if it's palindrome or not", example = "Level")
-                                @NotBlank @PathVariable String value) {
+    public OkResponseDTO isPalindrome(@NotBlank @PathVariable String value) {
         Instant start = Instant.now();
         logger.debug("The not.useful.property value is '{}'", notUsefulProperty);
         for(int i = 0; i < value.length(); i++) {

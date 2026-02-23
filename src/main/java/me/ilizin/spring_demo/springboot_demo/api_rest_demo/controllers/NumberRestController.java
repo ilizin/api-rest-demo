@@ -1,6 +1,5 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
-import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.GcdInDto;
@@ -37,8 +36,7 @@ public class NumberRestController {
     }
 
     @GetMapping("/sqrt/{value}")
-    public OkResponseDTO sqrt(@Parameter(description = "A positive number the square root must be calculated", example = "4")
-                       @PathVariable @Positive(message = "The value must be positive")  int value) {
+    public OkResponseDTO sqrt(@PathVariable @Positive(message = "The value must be positive")  int value) {
         Instant start = Instant.now();
         String response = String.valueOf(sqrtService.sqrt(value));
         Instant end = Instant.now();
