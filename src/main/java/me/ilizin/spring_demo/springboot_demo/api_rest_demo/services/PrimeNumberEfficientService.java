@@ -37,13 +37,13 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             if (oneToValueInterval[i] == 0) { // i + 1 is a prime number
                 int j = 2;
                 //Mark with one all the (i + 1) composite numbers
-                while((i + 1) * j <= value) {
+                while((i + 1) * j <= Math.sqrt(value)) {
                     oneToValueInterval[((i + 1) * j) - 1] = 1;
                     j++;
                 }
             }
         }
-        return oneToValueInterval[value -1] == 0;
+        return oneToValueInterval[value - 1] == 0;
     }
 
     private boolean isPrimeWithSieveOfSundaram(int value) {
