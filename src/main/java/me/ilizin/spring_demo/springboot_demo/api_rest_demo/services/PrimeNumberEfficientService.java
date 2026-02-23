@@ -18,7 +18,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         }
 
         if (PrimeMethod.SIEVE_OF_SUNDARAM_METHOD == primeMethod) {
-            return isPrimeWithSieveOfEratosthenes(value);
+            return isPrimeWithSieveOfSundaram(value);
         }
 
         if (PrimeMethod.SIEVE_OF_ATKIN_METHOD == primeMethod) {
@@ -44,5 +44,9 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             }
         }
         return oneToValueInterval[value -1] == 0;
+    }
+
+    private boolean isPrimeWithSieveOfSundaram(int value) {
+        return true;
     }
 }
