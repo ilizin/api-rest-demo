@@ -33,6 +33,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             return false;
         }
         int[] oneToValueInterval = new int[value];
+        // TODO Add a comment
         for (int i = 1; i < Math.sqrt(value); i++) {
             if (oneToValueInterval[i] == 0) { // i + 1 is a prime number
                 int j = 2;
