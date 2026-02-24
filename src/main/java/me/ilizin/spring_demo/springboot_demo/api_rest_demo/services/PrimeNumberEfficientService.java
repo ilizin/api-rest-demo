@@ -33,11 +33,11 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             return false;
         }
         int[] oneToValueInterval = new int[value];
-        for (int i = 1; i < oneToValueInterval.length; i++) {
+        for (int i = 1; i < Math.sqrt(value); i++) {
             if (oneToValueInterval[i] == 0) { // i + 1 is a prime number
                 int j = 2;
                 //Mark with one all the (i + 1) composite numbers
-                while((i + 1) * j <= Math.sqrt(value)) {
+                while((i + 1) * j <= value) {
                     oneToValueInterval[((i + 1) * j) - 1] = 1;
                     j++;
                 }
