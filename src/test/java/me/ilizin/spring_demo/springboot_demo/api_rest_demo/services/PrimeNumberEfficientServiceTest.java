@@ -38,5 +38,7 @@ public class PrimeNumberEfficientServiceTest {
                 .isEqualTo(expectedResult);
         assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD))
                 .isEqualTo(expectedResult);
+        assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.SIEVE_OF_SUNDARAM_METHOD))
+                .isEqualTo(expectedResult);
     }
 }
