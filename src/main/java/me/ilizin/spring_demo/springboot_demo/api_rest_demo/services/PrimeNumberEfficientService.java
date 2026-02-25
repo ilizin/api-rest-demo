@@ -51,6 +51,22 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
     }
 
     private boolean isPrimeWithSieveOfSundaram(int value) {
+        if (value <= 1) {
+            return false;
+        }
+        int[] oneToValueInterval = new int[value];
+        for (int i = 1; i < value; i++) {
+            boolean limit = false;
+            for (int j = i; j < value && limit; j++) {
+                int a = i + j  + 2 * i * j;
+                if (a < value) {
+                    oneToValueInterval[a] = 1;
+                } else {
+                    limit = true;
+                }
+
+            }
+        }
         return true;
     }
 }
