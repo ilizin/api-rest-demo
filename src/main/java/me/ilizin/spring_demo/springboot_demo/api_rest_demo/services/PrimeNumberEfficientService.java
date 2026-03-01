@@ -66,18 +66,13 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
                 }
             }
         }
+
         for (int i = 0; i < value; i++) {
             if (oneToValueInterval[i] == 0) {
                 oneToValueInterval[i] = (i + 1) * 2 + 1;
-            }
-        }
-
-        for (int i = 0; i < oneToValueInterval.length; i++) {
-            if (oneToValueInterval[i] == value) {
-                return true;
-            }
-            if (oneToValueInterval[i] > value) {
-                return false;
+                if (oneToValueInterval[i] == value) {
+                    return true;
+                }
             }
         }
 
