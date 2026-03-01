@@ -54,6 +54,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         if (value <= 1) {
             return false;
         }
+
         int[] oneToValueInterval = new int[value];
         for (int i = 1; i < value; i++) {
             boolean limit = false;
@@ -76,6 +77,10 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             }
         }
 
+        return false;
+    }
+
+    private boolean isPrimeWithSieveOfAtkin(int value) {
         return false;
     }
 }
