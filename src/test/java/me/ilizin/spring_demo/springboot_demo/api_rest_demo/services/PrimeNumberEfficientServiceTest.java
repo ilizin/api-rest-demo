@@ -34,10 +34,10 @@ public class PrimeNumberEfficientServiceTest {
     @ParameterizedTest
     @MethodSource("isPrime")
     public void isPrime(int value, boolean expectedResult) {
-        /*assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.NAIVE_METHOD))
+        assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.NAIVE_METHOD))
                 .isEqualTo(expectedResult);
         assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD))
-                .isEqualTo(expectedResult);*/
+                .isEqualTo(expectedResult);
         assertThat(primeNumberEfficientService.isPrime(value, PrimeMethod.SIEVE_OF_SUNDARAM_METHOD))
                 .isEqualTo(expectedResult);
     }
