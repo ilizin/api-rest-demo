@@ -34,7 +34,9 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         }
         int[] oneToValueInterval = new int[value + 1];
         for (int i = 2; i < oneToValueInterval.length ; i++) {
-            // TODO Add a comment
+            /* We stop when we reach the square root of value
+               because any composite (non-prime) number less than or equal to
+               value must have at least one prime factor less than or equal to sqrt(value) */
             if (oneToValueInterval[i] == 0 && i > Math.sqrt(value)) {
                 return oneToValueInterval[value] == 0;
             }
