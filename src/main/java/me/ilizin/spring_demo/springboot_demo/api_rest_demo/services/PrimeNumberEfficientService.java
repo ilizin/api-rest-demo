@@ -86,6 +86,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
     }
 
     private boolean isPrimeWithSieveOfAtkin(int value) {
-        return false;
+        // List integers 1 to N
+        int[] oneToValueInterval = new int[value];
     }
 }
