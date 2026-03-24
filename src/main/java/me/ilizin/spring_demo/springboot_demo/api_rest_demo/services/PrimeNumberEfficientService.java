@@ -32,22 +32,22 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         if (value <= 1) {
             return false;
         }
-        int[] oneToValueInterval = new int[value];
-        // TODO Add a comment
-        for (int i = 1; i < oneToValueInterval.length ; i++) {
-            if (oneToValueInterval[i] == 0 && (i + 1) > Math.sqrt(value)) {
-                return oneToValueInterval[value - 1] == 0;
+        int[] oneToValueInterval = new int[value + 1];
+        for (int i = 2; i < oneToValueInterval.length ; i++) {
+            // TODO Add a comment
+            if (oneToValueInterval[i] == 0 && i > Math.sqrt(value)) {
+                return oneToValueInterval[value] == 0;
             }
             if (oneToValueInterval[i] == 0) { // i + 1 is a prime number
                 int j = 2;
-                //Mark with one all the (i + 1) composite numbers
-                while((i + 1) * j <= value) {
-                    oneToValueInterval[((i + 1) * j) - 1] = 1;
+                //Mark with one all the 'i' composite numbers
+                while (i * j <= value) {
+                    oneToValueInterval[i * j] = 1;
                     j++;
                 }
             }
         }
-        return oneToValueInterval[value - 1] == 0;
+        return oneToValueInterval[value] == 0;
     }
 
     private boolean isPrimeWithSieveOfSundaram(int value) {
@@ -80,7 +80,6 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
                 }
             }
         }
-
         return false;
     }
 
