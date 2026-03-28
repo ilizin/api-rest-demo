@@ -1,4 +1,4 @@
-# 🍃 api-rest-demo
+# 🍃api-rest-demo
 
 This demo project shows how easy is to build an api rest with spring boot.
 
