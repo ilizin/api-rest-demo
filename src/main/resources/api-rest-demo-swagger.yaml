@@ -52,8 +52,8 @@ paths:
 
   /api/v1/primes:
     get:
-      summary: Check if a number is a prime number
-      description: Return true if the number is prime else return false
+      summary: Return all prime numbers between 1 and a given value
+      description: Return all prime numbers between 1 and a given value using the native, sieve of eratosthenes, sieve of sundarm or sieve of atkin methods
       tags:
         - Number controller
       parameters:
