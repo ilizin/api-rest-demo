@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.Instant;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/api/v1")
 public class NumberRestController {
 
     private final ISqrtService sqrtService;
@@ -43,10 +43,10 @@ public class NumberRestController {
         return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }
 
-    @GetMapping("/prime")
-    public OkResponseDTO isPrime(@Valid PrimeInDto primeInDto) {
+    @GetMapping("/primes")
+    public OkResponseDTO primes(@Valid PrimeInDto primeInDto) {
         Instant start = Instant.now();
-        String response = String.valueOf(primeNumberService.isPrime(primeInDto.getValue(), primeInDto.getMethod()));
+        String response = String.valueOf(primeNumberService.primes(primeInDto.getValue(), primeInDto.getMethod()));
         Instant end = Instant.now();
         return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }

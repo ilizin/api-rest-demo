@@ -16,7 +16,20 @@ import org.springframework.stereotype.Service;
 public class PrimeNumberBasicService implements IPrimeNumberService {
 
     @Override
-    public boolean isPrime(int value, PrimeMethod primeMethod) {
+    public String primes(int value, PrimeMethod primeMethod) {
+        StringBuilder primes = new StringBuilder();
+        if (value <= 1) {
+            return primes.toString();
+        }
+        for (int i = 2; i <= value; i++) {
+            if (isPrime(i)) {
+                primes.append(i).append(';');
+            }
+        }
+        return primes.toString();
+    }
+
+    public boolean isPrime(int value) {
         if (value <= 1) {
             return false;
         }

@@ -21,7 +21,7 @@ import java.time.Instant;
 /* You can use the @RequestMapping annotation to map requests to controllers methods. It has various attributes to match by URL,
    HTTP method, request parameters, headers, and media types. You can use it at the class level to express shared mappings or at the method level
    to narrow down to a specific endpoint mapping */
-@RequestMapping("/v1")
+@RequestMapping("/api/v1")
 public class StringRestController {
     private static final Logger logger = LoggerFactory.getLogger(StringRestController.class);
 

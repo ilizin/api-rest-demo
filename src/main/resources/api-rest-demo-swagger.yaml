@@ -10,7 +10,7 @@ info:
     name: MIT License
     url: 'https://github.com/ilizin/api-rest-demo/blob/main/LICENSE'
 servers:
-  - url: http://localhost:8080/api-rest-with-jpa-demo/
+  - url: http://localhost:8081/api-rest-demo/
     description: Local environment
 externalDocs:
   description: Find more info here
@@ -50,7 +50,7 @@ paths:
                 status: 400
                 message: The value must be positive
 
-  /api/v1/prime:
+  /api/v1/primes:
     get:
       summary: Check if a number is a prime number
       description: Return true if the number is prime else return false
