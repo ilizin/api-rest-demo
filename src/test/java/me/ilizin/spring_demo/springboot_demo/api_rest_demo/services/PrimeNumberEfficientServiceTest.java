@@ -12,16 +12,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PrimeNumberEfficientServiceTest {
     private static Stream<Arguments> isPrime() {
         return Stream.of(
-                Arguments.of(9, "false"),
-                Arguments.of(4, "false"),
-                Arguments.of(11, "true"),
-                Arguments.of(1, "false"),
-                Arguments.of(5, "true"),
-                Arguments.of(21, "false"),
-                Arguments.of(23, "true"),
-                Arguments.of(10, "false"),
-                Arguments.of(33, "false"),
-                Arguments.of(101, "true")
+                Arguments.of(9, "2;3;5;7"),
+                Arguments.of(4, "2;3"),
+                Arguments.of(11, "2;3;5;7;11"),
+                Arguments.of(1, ""),
+                Arguments.of(5, "2;3;5"),
+                Arguments.of(21, "2;3;5;7;11;13;17;19"),
+                Arguments.of(23, "2;3;5;7;11;13;17;19;23"),
+                Arguments.of(10, "2;3;5;7"),
+                Arguments.of(33, "2;3;5;7;11;13;17;19;23;29;31"),
+                Arguments.of(101, "2;3;5;7;11;13;17;19;23;29;31;37;41;43;47;53;59;61;67;71;73;79;83;89;97;101")
         );
     }
 
