@@ -12,16 +12,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PrimeNumberEfficientServiceTest {
     private static Stream<Arguments> isPrime() {
         return Stream.of(
-                Arguments.of(9, false),
-                Arguments.of(4, false),
-                Arguments.of(11, true),
-                Arguments.of(1, false),
-                Arguments.of(5, true),
-                Arguments.of(21, false),
-                Arguments.of(23, true),
-                Arguments.of(10, false),
-                Arguments.of(33, false),
-                Arguments.of(101, true)
+                Arguments.of(9, "false"),
+                Arguments.of(4, "false"),
+                Arguments.of(11, "true"),
+                Arguments.of(1, "false"),
+                Arguments.of(5, "true"),
+                Arguments.of(21, "false"),
+                Arguments.of(23, "true"),
+                Arguments.of(10, "false"),
+                Arguments.of(33, "false"),
+                Arguments.of(101, "true")
         );
     }
 
@@ -33,7 +33,7 @@ public class PrimeNumberEfficientServiceTest {
 
     @ParameterizedTest
     @MethodSource("isPrime")
-    public void isPrime(int value, boolean expectedResult) {
+    public void isPrime(int value, String expectedResult) {
         assertThat(primeNumberEfficientService.primes(value, PrimeMethod.NAIVE_METHOD))
                 .isEqualTo(expectedResult);
         assertThat(primeNumberEfficientService.primes(value, PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD))

@@ -13,10 +13,10 @@ public class PrimeNumberBasicServiceTest {
 
     private static Stream<Arguments> isPrime() {
         return Stream.of(
-                Arguments.of(9, false),
-                Arguments.of(4, false),
-                Arguments.of(11, true),
-                Arguments.of(101, true)
+                Arguments.of(9, "false"),
+                Arguments.of(4, "false"),
+                Arguments.of(11, "true"),
+                Arguments.of(101, "true")
         );
     }
 
@@ -28,8 +28,8 @@ public class PrimeNumberBasicServiceTest {
 
     @ParameterizedTest
     @MethodSource("isPrime")
-    public void isPrime(int value, boolean expectedResult) {
-        assertThat(primeNumberBasicService.isPrime(value, PrimeMethod.NAIVE_METHOD))
+    public void isPrime(int value, String expectedResult) {
+        assertThat(primeNumberBasicService.primes(value, PrimeMethod.NAIVE_METHOD))
                 .isEqualTo(expectedResult);
     }
 }
