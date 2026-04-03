@@ -1,8 +1,12 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.enums.PrimeMethod;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+/* Indicates that a bean should be given preference when multiple candidates are qualified to autowire
+   a single-valued dependency. If exactly one 'primary' bean exists among the candidates, it will be the autowired value. */
+@Primary
 @Service
 public class PrimeNumberEfficientService extends PrimeNumberBasicService {
 
@@ -10,22 +14,29 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
     public String primes(int value, PrimeMethod primeMethod) {
 
         if (PrimeMethod.NAIVE_METHOD == primeMethod) {
-            return super.primes(value, primeMethod);
+            return removeLastSemiColon(super.primes(value, primeMethod));
         }
 
         if (PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD == primeMethod) {
-            return isPrimeWithSieveOfEratosthenes(value);
+            return removeLastSemiColon(isPrimeWithSieveOfEratosthenes(value));
         }
 
         if (PrimeMethod.SIEVE_OF_SUNDARAM_METHOD == primeMethod) {
-            return isPrimeWithSieveOfSundaram(value);
+            return removeLastSemiColon(isPrimeWithSieveOfSundaram(value));
         }
 
         if (PrimeMethod.SIEVE_OF_ATKIN_METHOD == primeMethod) {
-            return isPrimeWithSieveOfEratosthenes(value);
+            return removeLastSemiColon(isPrimeWithSieveOfEratosthenes(value));
         }
 
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException("Selected an invalid method");
+    }
+
+    private String removeLastSemiColon(String primes) {
+        if (primes.endsWith(";")) {
+            primes = primes.substring(0, primes.length() - 1);
+        }
+        return primes;
     }
 
     private String isPrimeWithSieveOfEratosthenes(int value) {
@@ -41,7 +52,8 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             if (oneToValueInterval[i] == 0 && i > Math.sqrt(value)) {
                 for (int a: oneToValueInterval) {
                     if (a == 1) {
-                        primes.append(a).append(';');
+                        primes.append(a)
+                              .append(';');
                     }
                 }
                 return primes.toString();
@@ -100,7 +112,6 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
     }
 
     private String isPrimeWithSieveOfAtkin(int value) {
-        // List integers 1 to N
-        return null;
+        throw new UnsupportedOperationException("Sieve of Atkin method not implemented yet");
     }
 }
