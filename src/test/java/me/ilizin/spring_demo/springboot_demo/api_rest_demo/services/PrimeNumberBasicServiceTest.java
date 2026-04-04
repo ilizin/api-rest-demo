@@ -13,10 +13,10 @@ public class PrimeNumberBasicServiceTest {
 
     private static Stream<Arguments> isPrime() {
         return Stream.of(
-                Arguments.of(9, "2;3;5;7;"),
-                Arguments.of(4, "2;3;"),
-                Arguments.of(11, "2;3;5;7;11;"),
-                Arguments.of(101, "2;3;5;7;11;13;17;19;23;29;31;37;41;43;47;53;59;61;67;71;73;79;83;89;97;101;")
+                Arguments.of(9, "2;3;5;7"),
+                Arguments.of(4, "2;3"),
+                Arguments.of(11, "2;3;5;7;11"),
+                Arguments.of(101, "2;3;5;7;11;13;17;19;23;29;31;37;41;43;47;53;59;61;67;71;73;79;83;89;97;101")
         );
     }
 
