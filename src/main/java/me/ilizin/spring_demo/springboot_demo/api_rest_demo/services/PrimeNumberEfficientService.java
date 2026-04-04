@@ -1,6 +1,7 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.enums.PrimeMethod;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.utils.ApiRestDemoUtils;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -14,29 +15,22 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
     public String primes(int value, PrimeMethod primeMethod) {
 
         if (PrimeMethod.NAIVE_METHOD == primeMethod) {
-            return removeLastSemiColon(super.primes(value, primeMethod));
+            return ApiRestDemoUtils.removeLastSemiColon(super.primes(value, primeMethod));
         }
 
         if (PrimeMethod.SIEVE_OF_ERATOSTHENES_METHOD == primeMethod) {
-            return removeLastSemiColon(isPrimeWithSieveOfEratosthenes(value));
+            return ApiRestDemoUtils.removeLastSemiColon(isPrimeWithSieveOfEratosthenes(value));
         }
 
         if (PrimeMethod.SIEVE_OF_SUNDARAM_METHOD == primeMethod) {
-            return removeLastSemiColon(isPrimeWithSieveOfSundaram(value));
+            return ApiRestDemoUtils.removeLastSemiColon(isPrimeWithSieveOfSundaram(value));
         }
 
         if (PrimeMethod.SIEVE_OF_ATKIN_METHOD == primeMethod) {
-            return removeLastSemiColon(isPrimeWithSieveOfEratosthenes(value));
+            return ApiRestDemoUtils.removeLastSemiColon(isPrimeWithSieveOfEratosthenes(value));
         }
 
         throw new IllegalArgumentException("Selected an invalid method");
-    }
-
-    private String removeLastSemiColon(String primes) {
-        if (primes.endsWith(";")) {
-            primes = primes.substring(0, primes.length() - 1);
-        }
-        return primes;
     }
 
     private String isPrimeWithSieveOfEratosthenes(int value) {

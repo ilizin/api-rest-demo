@@ -1,6 +1,7 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.services;
 
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.enums.PrimeMethod;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.utils.ApiRestDemoUtils;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class PrimeNumberBasicService implements IPrimeNumberService {
                 primes.append(i).append(';');
             }
         }
-        return primes.toString();
+        return ApiRestDemoUtils.removeLastSemiColon(primes.toString());
     }
 
     public boolean isPrime(int value) {
