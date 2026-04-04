@@ -44,15 +44,15 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
                because any composite (non-prime) number less than or equal to
                value must have at least one prime factor less than or equal to sqrt(value) */
             if (oneToValueInterval[i] == 0 && i > Math.sqrt(value)) {
-                for (int a: oneToValueInterval) {
-                    if (a == 1) {
-                        primes.append(a)
+                for (int number = 2; number < oneToValueInterval.length; number++) {
+                    if (oneToValueInterval[number] == 0) {
+                        primes.append(number)
                               .append(';');
                     }
                 }
                 return primes.toString();
             }
-            if (oneToValueInterval[i] == 0) { // i + 1 is a prime number
+            if (oneToValueInterval[i] == 0) { // i is a prime number
                 int j = 2;
                 //Mark with one all the 'i' composite numbers
                 while (i * j <= value) {
