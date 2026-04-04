@@ -71,7 +71,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         }
 
         // List integers 1 to N
-        int[] oneToValueInterval = new int[value];
+        int[] oneToValueInterval = new int[value + 1];
 
         // Remove the numbers of the form i + j + (2 * i * j) where 1 <= i <= j and i + j + (2 * i * j) <= value
         for (int i = 1; i < value; i++) {
