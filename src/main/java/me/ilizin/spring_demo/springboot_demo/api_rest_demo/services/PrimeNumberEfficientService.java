@@ -69,6 +69,8 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         if (value <= 1) {
             return primes.toString();
         }
+        primes.append(2)
+                .append(";");
 
         // List integers 1 to N
         int[] oneToValueInterval = new int[value + 1];
@@ -91,10 +93,11 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             if (oneToValueInterval[i] == 0) {
                 oneToValueInterval[i] = i * 2 + 1;
                 //if (oneToValueInterval[i] == value) {
-                    if (oneToValueInterval[i] < value) {
+                    if (oneToValueInterval[i] <= value && oneToValueInterval[i] != 1) {
                         //for (int a: oneToValueInterval) {
                          //   if (a == 1) {
-                                primes.append(oneToValueInterval[i]).append(';');
+                                primes.append(oneToValueInterval[i])
+                                        .append(';');
                           //  }
                         //}
                         //return primes.toString();
