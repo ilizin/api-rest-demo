@@ -64,7 +64,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         return primes.toString();
     }
 
-    private String isPrimeWithSieveOfSundaram(int value) {
+        private String isPrimeWithSieveOfSundaram(int value) {
         StringBuilder primes = new StringBuilder();
         if (value <= 1) {
             return primes.toString();
@@ -74,12 +74,12 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         int[] oneToValueInterval = new int[value + 1];
 
         // Remove the numbers of the form i + j + (2 * i * j) where 1 <= i <= j and i + j + (2 * i * j) <= value
-        for (int i = 1; i < value; i++) {
+        for (int i = 1; i <= value; i++) {
             boolean limit = false;
             for (int j = i; j <= value && !limit; j++) {
                 int a = i + j  + (2 * i * j);
                 if (a <= value) {
-                    oneToValueInterval[a - 1] = 1;
+                    oneToValueInterval[a] = 1;
                 } else {
                     limit = true;
                 }
@@ -89,9 +89,9 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
         // Double the remaining numbers and add 1 
         for (int i = 0; i <= value; i++) {
             if (oneToValueInterval[i] == 0) {
-                oneToValueInterval[i] = (i + 1) * 2 + 1;
-                if (oneToValueInterval[i] == value) {
-                    if (oneToValueInterval[i] == 0 && i > Math.sqrt(value)) {
+                oneToValueInterval[i] = i * 2 + 1;
+                //if (oneToValueInterval[i] == value) {
+                    if (oneToValueInterval[i] >= value) {
                         for (int a: oneToValueInterval) {
                             if (a == 1) {
                                 primes.append(a).append(';');
@@ -99,7 +99,7 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
                         }
                         return primes.toString();
                     }
-                }
+                //}
             }
         }
         return primes.toString();
