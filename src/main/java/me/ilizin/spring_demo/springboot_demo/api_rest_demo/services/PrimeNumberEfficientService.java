@@ -91,13 +91,13 @@ public class PrimeNumberEfficientService extends PrimeNumberBasicService {
             if (oneToValueInterval[i] == 0) {
                 oneToValueInterval[i] = i * 2 + 1;
                 //if (oneToValueInterval[i] == value) {
-                    if (oneToValueInterval[i] >= value) {
-                        for (int a: oneToValueInterval) {
-                            if (a == 1) {
-                                primes.append(a).append(';');
-                            }
-                        }
-                        return primes.toString();
+                    if (oneToValueInterval[i] < value) {
+                        //for (int a: oneToValueInterval) {
+                         //   if (a == 1) {
+                                primes.append(oneToValueInterval[i]).append(';');
+                          //  }
+                        //}
+                        //return primes.toString();
                     }
                 //}
             }
