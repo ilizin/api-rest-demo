@@ -20,9 +20,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class NumberRestControllerTest {
 
-    private static final String PRIME_URL = "/v1/prime";
-    private static final String SQRT_URL = "/v1/sqrt/";
-    private static final String GCD_URL = "/v1/gcd";
+    private static final String PRIME_URL = "/api/v1/primes";
+    private static final String SQRT_URL = "/api/v1/sqrt/";
+    private static final String GCD_URL = "/api/v1/gcd";
 
     private static Stream<Arguments> sqrtArguments() {
         return Stream.of(
@@ -41,9 +41,9 @@ public class NumberRestControllerTest {
 
     private static Stream<Arguments> primeArguments() {
         return Stream.of(
-                Arguments.of("9", "{\"value\":\"false\",\"responseTime\":0}", status().isOk()),
-                Arguments.of("4", "{\"value\":\"false\",\"responseTime\":0}", status().isOk()),
-                Arguments.of("11", "{\"value\":\"true\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("9", "{\"value\":\"2;3;5;7\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("4", "{\"value\":\"2;3\",\"responseTime\":0}", status().isOk()),
+                Arguments.of("11", "{\"value\":\"2;3;5;7;11\",\"responseTime\":0}", status().isOk()),
                 Arguments.of("bad_number", null, status().isBadRequest())
         );
     }
@@ -53,8 +53,8 @@ public class NumberRestControllerTest {
 
     @ParameterizedTest
     @MethodSource("primeArguments")
-    void prime(String value, String expectedResult, ResultMatcher expectedState) throws Exception {
-        ResultActions resultActions = this.mockMvc.perform(get(PRIME_URL + "?value="+value+"&primeMethod=NAIVE_METHOD"));
+    void primes(String value, String expectedResult, ResultMatcher expectedState) throws Exception {
+        ResultActions resultActions = this.mockMvc.perform(get(PRIME_URL + "?value="+value+"&method=NAIVE_METHOD"));
         resultActions.andExpect(expectedState);
         if (!value.equals("bad_number")) {
             resultActions.andExpect(content().string(expectedResult));
