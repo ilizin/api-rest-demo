@@ -1,8 +1,11 @@
 package me.ilizin.spring_demo.springboot_demo.api_rest_demo.controllers;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.ErrorResponseDTO;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.GcdInDto;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.OkResponseDTO;
+import me.ilizin.spring_demo.springboot_demo.api_rest_demo.model.StringSearchInDto;
 import me.ilizin.spring_demo.springboot_demo.api_rest_demo.services.IPalindromeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,4 +73,12 @@ public class StringRestController {
         String response = String.valueOf(palindromeService.isPalindrome(value));
         return new OkResponseDTO(response, end.getEpochSecond() - start.getEpochSecond());
     }
+
+    @GetMapping("/search")
+    public OkResponseDTO search(@Valid StringSearchInDto stringSearchInDto) {
+        Instant start = Instant.now();
+        Instant end = Instant.now();
+        return new OkResponseDTO(null, end.getEpochSecond() - start.getEpochSecond());
+    }
+
 }
